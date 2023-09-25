@@ -6,7 +6,7 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <a href="index.html"><img src="#" alt="Логотип города Седона"></a>
       <nav class="navigation">
         <ul class="navigation-list">
@@ -28,8 +28,8 @@
       </div>
     </header>
 
-    <main>
-      <section class="hotel-filter">
+    <main data-test="main">
+      <section class="hotel-filter" data-test="filter">
         <h1>Гостиницы Седоны</h1>
         <ul>
           <li><a href="index.html"><span class="visually-hidden">Главная</span></a></li>
@@ -72,7 +72,7 @@
         </form>
       </section>
 
-      <section class="search-results">
+      <section class="search-results" data-test="catalog">
         <header class="search-results-header">
           <h2>Найдено гостиниц:<span class="search-results-number"> 38</span></h2>
             <select name="sort-by" aria-label="Фильтр по цене">
@@ -166,7 +166,7 @@
         </footer>
       </section>
 
-      <section class="subscription">
+      <section class="subscription" data-test="subscribe">
         <h2 class="visually-hidden">Подписка</h2>
         <p class="title">
           <label for="subscription">Подпишитесь на&nbsp;рассылку</label>
@@ -179,7 +179,7 @@
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" data-test="footer">
       <ul class="social">
         <li class="social-item">
           <a class="social-item-button" href="#">
