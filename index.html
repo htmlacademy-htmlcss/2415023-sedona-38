@@ -7,12 +7,20 @@
   </head>
   <body>
     <header class="main-header" data-test="header">
-      <a href="#"><img src="#" alt="Логотип города Седона"></a>
+      <a class="header-logo" href="#">
+        <img class="logo" src="#" alt="Логотип города Седона">
+      </a>
       <nav class="navigation">
         <ul class="navigation-list">
-          <li class="navigation-item nav-current"><a href="#">Главная</a></li>
-          <li class="navigation-item"><a href="#">О&nbsp;Седоне</a></li>
-          <li class="navigation-item"><a href="catalog.html">Гостиницы</a></li>
+          <li class="navigation-item nav-current">
+            <a href="#">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#">О&nbsp;Седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a href="catalog.html">Гостиницы</a>
+          </li>
         </ul>
       </nav>
       <div class="user-communication">
@@ -24,14 +32,14 @@
             <span class="favorite-counter">12</span>
           </span>
         </a>
-        <button type="button" class="search-button">Хочу сюда</button>
+        <button class="search-button" type="button">Хочу сюда</button>
       </div>
     </header>
 
     <main data-test="main" >
       <section class="hero" data-test="hero">
         <h1 class="visually-hidden">О&nbsp;Седоне</h1>
-        <img class="hero-background-image" src="#" alt="фотография гор Седоны">
+        <img class="hero-background-image" src="#" alt="Горы Седоны">
         <div>
           <img class="hero-frontground-image" src="#" alt="Welcome">
           <img class="hero-frontground-image" src="#" alt="to the gorgeous">
@@ -49,7 +57,7 @@
             <li class="advantages-card">
               <h3 class="advantages-title">Настоящий городок</h3>
               <p class="advantages-subtitle">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
-              <img src="#" alt="Фото здания Седоны">
+              <img src="#" alt="Здания Седоны">
             </li>
             <li class="advantages-card">
               <h3 class="advantages-title">Небольшая площадь</h3>
@@ -66,7 +74,7 @@
             <li class="advantages-card">
               <h3 class="advantages-title">Там есть мост дьявола</h3>
               <p class="advantages-subtitle">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, разумеется</p>
-              <img src="#" alt="Фото Моста Дьявола">
+              <img src="#" alt="Мост Дьявола">
             </li>
           </ul>
         </section>
@@ -98,19 +106,18 @@
         <h2 class="visually-hidden">Поиск гостиницы в&nbsp;Седоне</h2>
         <p class="title">Заинтересовались?</p>
         <p class="subtitle">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
-        <button type="button" class="search-button">Поиск гостиницы в&nbsp;Седоне</button>
+        <button class="search-button" type="button">Поиск гостиницы в&nbsp;Седоне</button>
       </section>
 
 
       <section class="subscription" data-test="subscribe">
-        <h2 class="visually-hidden">Подписка</h2>
-        <p class="title">
+        <h2 class="title">
           <label for="subscription">Подпишитесь на&nbsp;рассылку</label>
-        </p>
-        <p class="subtitle">Только полезная информация и&nbsp;никакого спама,<br> честное бойскаутское!</p>
+        </h2>
+        <p class="subtitle">Только полезная информация и&nbsp;никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="get">
           <input id="subscription" type="email" name="e-mail" placeholder="Ваш e-mail">
-          <button type="submit" class="subscription-button">Подписаться</button>
+          <button class="subscription-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -118,25 +125,26 @@
     <footer class="main-footer" data-test="footer">
       <ul class="social">
         <li class="social-item">
-          <a class="social-item-button" href="#">
+          <a class="social-item-button" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы&nbsp;в&nbsp;Вконтакте</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-item-button" href="#">
+          <a class="social-item-button" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Мы&nbsp;в&nbsp;Телеграме</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-item-button" href="#">
+          <a class="social-item-button" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Мы&nbsp;на&nbsp;Youtube</span>
           </a>
         </li>
       </ul>
       <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a href="#">
-        <img src="#" alt="Логотип html academy">
+      <a href="https://htmlacademy.ru/">
+        <img src="#" alt="Логотип HTML academy">
       </a>
     </footer>
+    <!-- <script src=""></script> -->
   </body>
 </html>
