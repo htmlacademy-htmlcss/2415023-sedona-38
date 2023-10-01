@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="my-style.css">
   </head>
   <body>
     <header class="main-header" data-test="header">
@@ -53,7 +56,7 @@
 
         <form action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="infrastructure">
-            <legend>Инфраструктура:</legend>
+            <h4><legend>Инфраструктура:</legend></h4>
             <ul>
               <li>
                 <label>
@@ -73,7 +76,7 @@
             </ul>
           </fieldset>
           <fieldset class="housing-type">
-            <legend>Тип&nbsp;Жилья:</legend>
+            <h4><legend>Тип&nbsp;Жилья:</legend></h4>
             <ul>
               <li>
                 <label>
@@ -93,11 +96,11 @@
             </ul>
           </fieldset>
           <fieldset class="price">
-            <legend>Стоимость,&nbsp;₽:</legend>
-              <input type="text" id="price-from" value="0" placeholder="0">
-              <label for="price-from">от</label><br>
-              <input type="text" id="price-to" value="9000" placeholder="9000">
-              <label for="price-to">до</label><br>
+            <h4><legend>Стоимость,&nbsp;₽:</legend></h4>
+              <label for="price-from">от</label>
+              <input type="text" id="price-from" value="0" placeholder="0"><br>
+              <label for="price-to">до</label>
+              <input type="text" id="price-to" value="9000" placeholder="9000"><br>
               <span class="visually-hidden">Слайдер фильтра по цене</span>
           </fieldset>
 
@@ -157,7 +160,6 @@
             <p class="card-price-value">от&nbsp;5000&nbsp;₽</p>
             <button class="about" type="button">Подробнее</button>
             <button class="favorite favorite-added" type="button">В избранном</button>
-            <button class="favorite" type="button">В избранное</button>
             <div>
               <span class="visually-hidden">4 звезды</span>
               <div class="four-stars-hotel"></div>
@@ -225,7 +227,7 @@
         <h2 class="title">
           <label for="subscription">Подпишитесь на&nbsp;рассылку</label>
         </h2>
-        <p class="subtitle">Только полезная информация и&nbsp;никакого спама, честное бойскаутское!</p>
+        <p class="subtitle">Только полезная информация и&nbsp;никакого спама,<br> честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="get">
           <input id="subscription" type="email" name="e-mail" placeholder="Ваш e-mail">
           <button  class="subscription-button" type="submit">Подписаться</button>
