@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="my-style.css">
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
     <header class="main-header" data-test="header">
@@ -21,7 +18,7 @@
           <li class="navigation-item">
             <a href="#">О&nbsp;Седоне</a>
           </li>
-          <li class="navigation-item  nav-current" arial-current="page">
+          <li class="navigation-item nav-current" arial-current="page">
             <a href="#">Гостиницы</a>
           </li>
         </ul>
@@ -43,12 +40,12 @@
         <h1>Гостиницы Седоны</h1>
         <ol>
           <li>
-            <a href="index.html" title="На главную">
+            <a href="index.html" class="filter-navigation main-icon" title="На главную">
               <span class="visually-hidden">Главная</span>
             </a>
           </li>
           <li>
-            <a href="catalog.html" aria-current="page" tabindex="-1">
+            <a href="catalog.html" class="filter-navigation" aria-current="page" tabindex="-1">
               <span>Гостиницы</span>
             </a>
           </li>
@@ -59,17 +56,17 @@
             <h4><legend>Инфраструктура:</legend></h4>
             <ul>
               <li>
-                <label>
+                <label class="filter-labels">
                   <input type="checkbox" name="infrastructure" value="pool" checked> Бассейн
                 </label>
               </li>
               <li>
-                <label>
+                <label class="filter-labels">
                   <input type="checkbox" name="infrastructure" value="parking" checked> Парковка
                 </label>
               </li>
               <li>
-                <label>
+                <label class="filter-labels">
                   <input type="checkbox" name="infrastructure" value="wi-fi"> Wi-Fi
                 </label>
               </li>
@@ -79,17 +76,17 @@
             <h4><legend>Тип&nbsp;Жилья:</legend></h4>
             <ul>
               <li>
-                <label>
+                <label class="filter-labels">
                   <input type="radio" name="housing-type" value="hotel" checked> Гостиница
                 </label>
               </li>
               <li>
-                <label>
+                <label class="filter-labels">
                   <input type="radio" name="housing-type" value="motel"> Мотель
                 </label>
               </li>
               <li>
-                <label>
+                <label class="filter-labels">
                   <input type="radio" name="housing-type" value="apartments"> Апартаменты
                 </label>
               </li>
@@ -145,10 +142,9 @@
             <p class="card-price-value">от&nbsp;4000&nbsp;₽</p>
             <button class="about" type="button">Подробнее</button>
             <button class="favorite" type="button">В избранное</button>
-            <div>
+            <p class="four-stars-hotel">
               <span class="visually-hidden">4 звезды</span>
-              <div class="four-stars-hotel"></div>
-            </div>
+            </p>
             <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">8,5</span></p>
           </li>
           <li class="card">
@@ -160,10 +156,9 @@
             <p class="card-price-value">от&nbsp;5000&nbsp;₽</p>
             <button class="about" type="button">Подробнее</button>
             <button class="favorite favorite-added" type="button">В избранном</button>
-            <div>
+            <p class="four-stars-hotel">
               <span class="visually-hidden">4 звезды</span>
-              <div class="four-stars-hotel"></div>
-            </div>
+            </p>
             <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">9,2</span></p>
           </li>
           <li class="card">
@@ -175,10 +170,9 @@
             <p class="card-price-value">от&nbsp;2500&nbsp;₽</p>
             <button class="about" type="button">Подробнее</button>
             <button class="favorite" type="button">В избранное</button>
-            <div>
+            <p class="three-stars-hotel">
               <span class="visually-hidden">3 звезды</span>
-              <div class="three-stars-hotel"></div>
-            </div>
+            </p>
             <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">6,9</span></p>
           </li>
           <li class="card">
@@ -190,10 +184,9 @@
             <p class="card-price-value">от&nbsp;1500&nbsp;₽</p>
             <button class="about" type="button">Подробнее</button>
             <button class="favorite" type="button">В избранное</button>
-            <div>
+            <p class="two-stars-hotel">
               <span class="visually-hidden">2 звезды</span>
-              <div class="two-stars-hotel"></div>
-            </div>
+            </p>
             <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">5,0</span></p>
           </li>
         </ul>
