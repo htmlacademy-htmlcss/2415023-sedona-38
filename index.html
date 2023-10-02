@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
     <header class="main-header" data-test="header">
-      <a class="header-logo" href="#">
-        <img class="logo" src="#" alt="Логотип города Седона">
+      <a class="header-logo" href="index.html" arial-current="page">
+        <img class="logo" src="images/logo.svg" width="140" height="70.05" alt="Логотип города Седона">
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item nav-current">
-            <a href="#">Главная</a>
+            <a href="index.html" arial-current="page">Главная</a>
           </li>
           <li class="navigation-item">
             <a href="#">О&nbsp;Седоне</a>
@@ -24,13 +24,12 @@
         </ul>
       </nav>
       <div class="user-communication">
-        <a href="#">
+        <a href="#" class="header-search-button">
           <span class="visually-hidden">Поиск</span>
         </a>
-        <a href="#">
-          <span class="visually-hidden">Избранных отелей:
-            <span class="favorite-counter">12</span>
-          </span>
+        <a href="#" class="header-favorite-button">
+          <span class="visually-hidden">Избранных отелей:</span>
+          <span class="favorite-counter">12</span>
         </a>
         <button class="search-button" type="button">Хочу сюда</button>
       </div>
@@ -39,14 +38,11 @@
     <main data-test="main" >
       <section class="hero" data-test="hero">
         <h1 class="visually-hidden">О&nbsp;Седоне</h1>
-        <img class="hero-background-image" src="#" alt="Горы Седоны">
-        <div>
-          <img class="hero-frontground-image" src="#" alt="Welcome">
-          <img class="hero-frontground-image" src="#" alt="to the gorgeous">
-          <img class="hero-frontground-image" src="#" alt="Sedona">
+        <div class="hero-img-container">
+          <img class="hero-frontground-image hero-img-decoration" src="images/hero-foreground.svg" width="485" height="352" alt="Welcome to the gorgeous Sedona.<br> &quot;Because the Grand Canyon sucks!&quot;">
         </div>
-
       </section>
+
       <div data-test="advantages">
         <section class="about">
           <h2 class="visually-hidden">Преимущества города Седоны</h2>
@@ -57,7 +53,7 @@
             <li class="advantages-card">
               <h3 class="advantages-title">Настоящий городок</h3>
               <p class="advantages-subtitle">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
-              <img src="#" alt="Здания Седоны">
+              <img src="images/advantages-hotel.jpg" width="800" height="385" alt="Красивый отель Седоны">
             </li>
             <li class="advantages-card">
               <h3 class="advantages-title">Небольшая площадь</h3>
@@ -74,7 +70,7 @@
             <li class="advantages-card">
               <h3 class="advantages-title">Там есть мост дьявола</h3>
               <p class="advantages-subtitle">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, разумеется</p>
-              <img src="#" alt="Мост Дьявола">
+              <img src="images/advantages-devils-bridge.jpg" width="800" height="385" alt="Мост Дьявола">
             </li>
           </ul>
         </section>
@@ -86,15 +82,15 @@
           <p class="subtitle">Опытный персонал и&nbsp;качественное обслуживание!</p>
 
           <ul class="service-list">
-            <li class="service-card">
+            <li class="service-card service-housing">
               <h3 class="service-title">Жильё</h3>
               <p class="service-subtitle">Рекомендуем пожить в&nbsp;настоящем мотеле, всё как в&nbsp;кино!</p>
             </li>
-            <li class="service-card">
+            <li class="service-card service-food">
               <h3 class="service-title">Еда</h3>
               <p class="service-subtitle">Всегда заказывайте топовый фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
             </li>
-            <li class="service-card">
+            <li class="service-card service-souvenirs">
               <h3 class="service-title">Сувениры</h3>
               <p class="service-subtitle">Не&nbsp;только китайского, но&nbsp;и&nbsp;настоящего местного производства!</p>
             </li>
@@ -102,7 +98,7 @@
         </section>
       </div>
 
-      <section data-test="search">
+      <section class="search" data-test="search">
         <h2 class="visually-hidden">Поиск гостиницы в&nbsp;Седоне</h2>
         <p class="title">Заинтересовались?</p>
         <p class="subtitle">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
@@ -110,7 +106,7 @@
       </section>
 
 
-      <section class="subscription" data-test="subscribe">
+      <section class="subscription subscription-index" data-test="subscribe">
         <h2 class="title">
           <label for="subscription">Подпишитесь на&nbsp;рассылку</label>
         </h2>
@@ -124,17 +120,17 @@
 
     <footer class="main-footer" data-test="footer">
       <ul class="social">
-        <li class="social-item">
+        <li class="social-item social-vk">
           <a class="social-item-button" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы&nbsp;в&nbsp;Вконтакте</span>
           </a>
         </li>
-        <li class="social-item">
+        <li class="social-item social-tg">
           <a class="social-item-button" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Мы&nbsp;в&nbsp;Телеграме</span>
           </a>
         </li>
-        <li class="social-item">
+        <li class="social-item social-yt">
           <a class="social-item-button" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Мы&nbsp;на&nbsp;Youtube</span>
           </a>
@@ -142,7 +138,7 @@
       </ul>
       <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a href="https://htmlacademy.ru/">
-        <img src="#" alt="Логотип HTML academy">
+        <img src="images/logo-html-academy.svg" width="114.9" height="32.9" alt="Логотип HTML academy">
       </a>
     </footer>
     <!-- <script src=""></script> -->
