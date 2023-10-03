@@ -1,3 +1,4 @@
+/* -- ШРИФТЫ -- */
 @font-face {
   font-family: "PT Sans";
   font-weight: 400;
@@ -14,7 +15,7 @@
   font-display: swap;
 }
 
-
+/* -- ГЛОБАЛЬНЫЕ ТЕГИ -- */
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
@@ -36,6 +37,8 @@ body {
   object-fit: contain;
 }
 
+/* -- ШРИФТЫ ОФОРМЛЕНИЕ -- */
+/* заголовки */
 h1 {
   font-weight: 700;
   font-size: 60px;
@@ -76,6 +79,7 @@ h4 {
   color: violet;
 }
 
+/* -- HEADER -- */
 .navigation a{
   font-weight: 700;
   font-size: 20px;
@@ -85,53 +89,28 @@ h4 {
   text-decoration: none;
 }
 
-
-.filter-navigation {
-  font-size: 16px;
-  color: chartreuse;
-  text-decoration: none;
+.header-search-button {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/icon-search.svg);
 }
 
-.filter-labels {
-  font-weight: 700;
-  line-height: 23px;
-  color: chartreuse;
+.header-favorite-button {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/icon-favorite.svg);
 }
 
-.card-title a {
-  font-size: 24px;
-  line-height: 28px;
-  color: chartreuse;
-  text-decoration: none;
-}
-
-.card-rating {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: chartreuse;
-}
-
-.pagination a {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  text-transform: uppercase;
-  color: chartreuse;
-  text-decoration: none;
-}
-
-input::placeholder {
-  font-size: 18px;
-  line-height: 24px;
-  color: chartreuse;
-}
-
-.main-footer .phone-number {
-  font-size: 40px;
-  line-height: 40px;
-  text-transform: uppercase;
-  color: chartreuse;
+.favorite-counter {
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 10px;
+  background-color: rgba(125, 181, 79, 1);
+  border-radius: 50%;
 }
 
 .search-button {
@@ -142,12 +121,35 @@ input::placeholder {
   color: cyan ;
 }
 
-.search .search-button {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+/* -- FOOTER -- */
+.main-footer .phone-number {
+  font-size: 40px;
+  line-height: 40px;
   text-transform: uppercase;
-  color: palevioletred;
+  color: chartreuse;
+}
+
+.social-item {
+  background-repeat: no-repeat;
+  }
+
+  .social-vk {
+    background-image: url(../images/social-vkontakte.svg);
+  }
+
+  .social-tg {
+    background-image: url(../images/social-telegram.svg);
+  }
+
+  .social-yt {
+    background-image: url(../images/social-youtube.svg);
+}
+
+/* -- subscription -- */
+.subscription input::placeholder {
+  font-size: 18px;
+  line-height: 24px;
+  color: paleturquoise;
 }
 
 .subscription-button {
@@ -158,25 +160,14 @@ input::placeholder {
   color: palevioletred;
 }
 
-.header-search-button {
-    display: block;
-    width: 18px;
-    height: 18px;
-    background-image: url(../images/icon-search.svg);
-  }
-
-  .header-favorite-button {
-    display: block;
-    width: 18px;
-    height: 18px;
-    background-image: url(../images/icon-favorite.svg);
-  }
-
-  .favorite-counter {
-    background-color: green;
-    border-radius: 50%;
+.subscription-index {
+  width: 1200px;
+  height: 414.86px;
+  background-image: url(../images/subscribe-background.jpg);
 }
 
+/* -- INDEX -- */
+/* hero */
 .hero-img-container {
   position: relative;
   width: 1200px;
@@ -185,12 +176,43 @@ input::placeholder {
   url(../images/hero-background.jpg) no-repeat;
 }
 
-.hero-img-decoration {
+.hero-frontground-image {
   position: absolute;
   left: 357.5px;
   top: 51.4px;
 }
 
+.search .search-button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: blueviolet;
+}
+
+/* причины */
+.advantages-card {
+  width: 400px;
+  height: 385px;
+  background-repeat: no-repeat;
+  background-position: center 81px;
+  }
+
+.advantages li:nth-child(1n){
+    background-color: rgba(131, 179, 211, 0.2);
+  }
+
+  .advantages li:nth-child(2n){
+    background-color: rgba(131, 179, 211, 0.12);
+  }
+
+  .advantages li:first-child,
+  .advantages li:last-child {
+    background-color: rgba(130, 179, 211, 1);
+}
+
+
+/* сервисы */
 .service-card {
   width: 400px;
   height: 385px;
@@ -218,34 +240,10 @@ input::placeholder {
     background-image: url(../images/services-souvenirs.svg);
 }
 
-.subscription-index {
-  width: 1200px;
-  height: 414.86px;
-  background-image: url(../images/subscribe-background.jpg);
-}
 
 
-.social-item {
-    background-repeat: no-repeat;
-  }
-
-  .social-vk {
-    background-image: url(../images/social-vkontakte.svg);
-  }
-
-  .social-tg {
-    background-image: url(../images/social-telegram.svg);
-  }
-
-  .social-yt {
-    background-image: url(../images/social-youtube.svg);
-}
-
-
-
-
-/* CATALOG */
-
+/* -- CATALOG -- */
+/* каталог фильтр */
 .hotel-filter {
   width: 1200px;
   /* height: 412px; */
@@ -259,6 +257,49 @@ input::placeholder {
   background: url(../images/icon-house.svg) no-repeat;
 }
 
+.filter-navigation {
+  font-size: 16px;
+  color: chartreuse;
+  text-decoration: none;
+}
+
+.filter-labels {
+  font-weight: 700;
+  line-height: 23px;
+  color: chartreuse;
+}
+
+.price input {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: bisque;
+}
+
+.price input::placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: bisque;
+}
+
+.submit-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: bisque;
+  text-transform: uppercase;
+}
+
+.cancel-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: bisque;
+  text-transform: uppercase;
+}
+
+/* каталог каталог */
 .catalog-view {
   width: 48px;
   height: 48px;
@@ -277,6 +318,37 @@ input::placeholder {
 
   .catalog-view-list {
     background-image: url(../images/catalog-list.svg);
+}
+
+.card-title a {
+  font-size: 24px;
+  line-height: 28px;
+  color: chartreuse;
+  text-decoration: none;
+}
+
+.about-hotel-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: chartreuse;
+  text-transform: uppercase;
+}
+
+.favorite-add-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: chartreuse;
+  text-transform: uppercase;
+}
+
+.favorite-added {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: red;
+  text-transform: uppercase;
 }
 
 .one-star-hotel {
@@ -317,4 +389,20 @@ input::placeholder {
   height: 17px;
   background-image: url(../images/icon-hotel-star.svg);
   background-repeat: repeat;
+}
+
+.card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: blueviolet;
+}
+
+.pagination a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: chartreuse;
+  text-decoration: none;
 }
