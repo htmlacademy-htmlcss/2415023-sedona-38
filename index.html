@@ -31,7 +31,7 @@
           <span class="visually-hidden">Избранных отелей:</span>
           <span class="favorite-counter">12</span>
         </a>
-        <button class="search-button" type="button">Хочу сюда</button>
+        <button class="button button-basic" type="button">Хочу сюда</button>
       </div>
     </header>
 
@@ -43,13 +43,13 @@
         </div>
       </section>
 
-      <div data-test="advantages">
+      <div class="advantages" data-test="advantages">
         <section class="about">
           <h2 class="visually-hidden">Преимущества города Седоны</h2>
           <p class="title">Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне,<br>заслуживающий большего!</p>
           <p class="subtitle">Рассмотрим причины, по&nbsp;которым Седона круче, чем Гранд-Каньон!</p>
 
-          <ul class="advantages" >
+          <ul class="advantages-list" >
             <li class="advantages-card">
               <h3 class="advantages-title">Настоящий городок</h3>
               <p class="advantages-subtitle">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
@@ -102,7 +102,7 @@
         <h2 class="visually-hidden">Поиск гостиницы в&nbsp;Седоне</h2>
         <p class="title">Заинтересовались?</p>
         <p class="subtitle">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
-        <button class="search-button" type="button">Поиск гостиницы в&nbsp;Седоне</button>
+        <button class="button button-basic" type="button">Поиск гостиницы в&nbsp;Седоне</button>
       </section>
 
 
@@ -110,28 +110,28 @@
         <h2 class="title">
           <label for="subscription">Подпишитесь на&nbsp;рассылку</label>
         </h2>
-        <p class="subtitle">Только полезная информация и&nbsp;никакого спама, честное бойскаутское!</p>
+        <p class="subtitle">Только полезная информация и&nbsp;никакого спама,<br>честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="get">
           <input id="subscription" type="email" name="e-mail" placeholder="Ваш e-mail">
-          <button class="subscription-button" type="submit">Подписаться</button>
+          <button class="button button-secondary" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
 
     <footer class="main-footer" data-test="footer">
       <ul class="social">
-        <li class="social-item social-vk">
-          <a class="social-item-button" href="https://vk.com/htmlacademy">
+        <li class="social-item">
+          <a class="social-item-button social-vk" href="https://vk.com/htmlacademy" title="Вконтакте">
             <span class="visually-hidden">Мы&nbsp;в&nbsp;Вконтакте</span>
           </a>
         </li>
-        <li class="social-item social-tg">
-          <a class="social-item-button" href="https://t.me/htmlacademy">
+        <li class="social-item">
+          <a class="social-item-button social-tg" href="https://t.me/htmlacademy" title="Telegram">
             <span class="visually-hidden">Мы&nbsp;в&nbsp;Телеграме</span>
           </a>
         </li>
-        <li class="social-item social-yt">
-          <a class="social-item-button" href="https://www.youtube.com/user/htmlacademyru">
+        <li class="social-item">
+          <a class="social-item-button social-yt" href="https://www.youtube.com/user/htmlacademyru" title="Youtube">
             <span class="visually-hidden">Мы&nbsp;на&nbsp;Youtube</span>
           </a>
         </li>
