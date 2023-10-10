@@ -919,11 +919,11 @@ margin-left: 20px;
   color: inherit;
 }
 
-.pagination-current {
+/* .pagination-current {
   color: rgb(0, 0, 0);
 
   background-color: rgba(242, 242, 242, 1);
-}
+} */
 
 .pagination-next {
   color: rgb(0, 0, 0);
