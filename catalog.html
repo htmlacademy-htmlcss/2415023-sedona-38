@@ -5,8 +5,8 @@
     <title>Седона</title>
     <link rel="stylesheet" href="styles/style.css">
   </head>
-  <div class="container">
-    <div>
+  <body>
+    <div class="container">
       <header class="main-header" data-test="header">
         <a class="header-logo" href="index.html">
           <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
@@ -55,7 +55,7 @@
 
           <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="infrastructure">
-              <legend><h4>Инфраструктура:</h4></legend>
+              <legend><h4 class="fieldset-title">Инфраструктура:</h4></legend>
               <ul class="infrastructure-wrapper">
                 <li>
                   <label class="filter-check">
@@ -78,7 +78,7 @@
               </ul>
             </fieldset>
             <fieldset class="housing-type">
-              <legend><h4>Тип&nbsp;Жилья:</h4></legend>
+              <legend><h4 class="fieldset-title">Тип&nbsp;Жилья:</h4></legend>
               <ul class="housing-type-wrapper">
                 <li>
                   <label class="filter-radio">
@@ -101,13 +101,18 @@
               </ul>
             </fieldset>
             <fieldset class="price">
-              <legend><h4>Стоимость,&nbsp;₽:</h4></legend>
+              <legend><h4 class="fieldset-title">Стоимость,&nbsp;₽:</h4></legend>
                 <div class="price-select-wrapper">
-                  <label for="price-from">от</label>
-                  <input type="text" id="price-from" value="0" placeholder="0"><br>
-                  <label for="price-to">до</label>
-                  <input type="text" id="price-to" value="9000" placeholder="9000"><br>
-                  <span class="visually-hidden">Слайдер фильтра по цене</span>
+                  <div class="price-field">
+                    <label class="price-label" for="price-from">от</label>
+                    <input class="price-input price-input-from" type="text" id="price-from" value="0" placeholder="0">
+                  </div>
+                  <div class="price-field">
+                    <label class="price-label" for="price-to">до</label>
+                    <input class="price-input price-input-to" type="text" id="price-to" value="9000" placeholder="9000">
+                  </div>
+                  <!-- <span class="visually-hidden">Слайдер фильтра по цене</span> -->
+                  <span class="slider">Слайдер фильтра по цене</span>
                 </div>
             </fieldset>
             <div class="form-button-wrapper">
@@ -119,7 +124,7 @@
 
         <section class="search-results" data-test="catalog">
           <header class="search-results-header">
-            <h2 class="title">Найдено гостиниц:<span class="search-results-number"> 38</span></h2>
+            <h2 class="title">Найдено гостиниц: <span class="search-results-number">38</span></h2>
             <select class="sort-by" name="sort-by" aria-label="Фильтр по цене">
               <option value="cheapest">Сначала дешевые</option>
               <option value="cheapest">Сначала дорогие</option>
@@ -158,7 +163,7 @@
                 <button class="button button-secondary" type="button">В&nbsp;избранное</button>
               </div>
               <div class="card-stars-wrapper">
-                <p class="four-stars-hotel">
+                <p class="stars four-stars-hotel">
                   <span class="visually-hidden">4 звезды</span>
                 </p>
                 <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">8,5</span></p>
@@ -178,7 +183,7 @@
                 <button class="button button-secondary favorite-added" type="button">В&nbsp;избранном</button>
               </div>
               <div class="card-stars-wrapper">
-                <p class="four-stars-hotel">
+                <p class="stars four-stars-hotel">
                   <span class="visually-hidden">4 звезды</span>
                 </p>
                 <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">9,2</span></p>
@@ -198,7 +203,7 @@
                 <button class="button button-secondary" type="button">В&nbsp;избранное</button>
               </div>
               <div class="card-stars-wrapper">
-                <p class="three-stars-hotel">
+                <p class="stars three-stars-hotel">
                   <span class="visually-hidden">3 звезды</span>
                 </p>
                 <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">6,9</span></p>
@@ -218,7 +223,7 @@
                 <button class="button button-secondary" type="button">В&nbsp;избранное</button>
               </div>
               <div class="card-stars-wrapper">
-                <p class="two-stars-hotel">
+                <p class="stars two-stars-hotel">
                   <span class="visually-hidden">2 звезды</span>
                 </p>
                 <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">5,0</span></p>
@@ -228,8 +233,8 @@
 
           <footer class="search-results-footer">
             <ul class="pagination">
-              <li class="pagination-item pagination-current">
-                <a class="pagination-link">1</a>
+              <li class="pagination-item pagination-current" aria-current="page">
+                <a class="pagination-link" href="#">1</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">2</a>
@@ -262,6 +267,7 @@
               <button class="button button-secondary" type="submit">Подписаться</button>
             </form>
           </div>
+        </section>
       </main>
 
       <footer class="main-footer" data-test="footer">
