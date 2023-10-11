@@ -396,10 +396,8 @@ margin: 0;
   width: 1200px;
   margin: 0 auto;
   padding: 96px 0;
-  justify-content: flex-start;
-  align-items: center;
-
-  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .search .button {
