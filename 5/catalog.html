@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="favicon.png" type="/image.png">
+    <link rel="icon" href="favicon.png" type="image.png">
     <base href="https://htmlacademy-htmlcss.github.io/2415023-sedona-38/5/">
 </head>
   <body>
@@ -16,13 +16,13 @@
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a href="index.html">Главная</a>
+              <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a href="#">О&nbsp;Седоне</a>
+              <a class="navigation-link" href="#">О&nbsp;Седоне</a>
             </li>
             <li class="navigation-item nav-current" aria-current="page">
-              <a href="#">Гостиницы</a>
+              <a class="navigation-link" href="#">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -38,17 +38,16 @@
         </div>
       </header>
 
-      <main data-test="main">
+      <main class="main-container" data-test="main">
         <section class="hotel-filter" data-test="filter">
           <h1>Гостиницы Седоны</h1>
           <ul class="hotel-filter-paginator">
-            <li>
+            <li class="filter-paginator-item">
               <a href="index.html" class="filter-navigation main-icon" title="На главную">
                 <span class="visually-hidden">Главная</span>
-                <!-- <span>Главная</span> -->
               </a>
             </li>
-            <li>
+            <li class="filter-paginator-item">
               <a href="catalog.html" class="filter-navigation" aria-current="page" tabindex="-1">
                 <span>Гостиницы</span>
               </a>
@@ -156,15 +155,11 @@
                 <img class="card-img" src="images/hotels-amara-resort.jpg" width="300" height="212" alt="Вид на звездное небо из пещеры">
               </a>
               <h3 class="card-title"><a href="#" tabindex="-1">Amara Resort & Spa</a></h3>
-              <div class="card-text-wrapper">
+              <div class="card-content-wrapper">
                 <p class="card-price-name">Гостиница</p>
                 <p class="card-price-value">от&nbsp;4000&nbsp;₽</p>
-              </div>
-              <div class="card-button-wrapper">
                 <button class="button button-basic" type="button">Подробнее</button>
                 <button class="button button-secondary" type="button">В&nbsp;избранное</button>
-              </div>
-              <div class="card-stars-wrapper">
                 <p class="stars four-stars-hotel">
                   <span class="visually-hidden">4 звезды</span>
                 </p>
