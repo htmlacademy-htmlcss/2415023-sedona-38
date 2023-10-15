@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.png" type="image.png">
   </head>
   <body>
     <div class="container">
@@ -14,13 +15,13 @@
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item nav-current">
-              <a href="index.html" aria-current="page">Главная</a>
+              <a class="navigation-link" href="index.html" aria-current="page">Главная</a>
             </li>
             <li class="navigation-item">
-              <a href="#">О&nbsp;Седоне</a>
+              <a class="navigation-link" href="#">О&nbsp;Седоне</a>
             </li>
             <li class="navigation-item">
-              <a href="catalog.html">Гостиницы</a>
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -36,7 +37,7 @@
         </div>
       </header>
 
-      <main data-test="main" >
+      <main class="main-container" data-test="main" >
         <section class="hero" data-test="hero">
           <h1 class="visually-hidden">О&nbsp;Седоне</h1>
           <div class="hero-img-container">
@@ -46,19 +47,19 @@
 
         <div class="advantages" data-test="advantages">
           <section class="about">
-            <div class="advantages-title-container">
+            <div class="title-container advantages-title-container">
               <h2 class="visually-hidden">Преимущества города Седоны</h2>
-              <p class="title">Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне,<br>заслуживающий большего!</p>
+              <p class="title">Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!</p>
               <p class="subtitle">Рассмотрим причины, по&nbsp;которым Седона круче, чем Гранд-Каньон!</p>
             </div>
 
             <ul class="advantages-list" >
-              <li class="advantages-card">
+              <li class="advantages-card advantages-with-pic">
                 <div class="advantages-text">
                   <h3 class="advantages-title">Настоящий городок</h3>
                   <p class="advantages-subtitle">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
-                <img src="images/advantages-hotel.jpg" width="800" height="385" alt="Красивый отель Седоны">
+                  <img class="right-pic-location" src="images/advantages-hotel.jpg" width="800" height="385" alt="Отель Седоны с открытой верандой и видом на сад, на фоне гор">
               </li>
               <li class="advantages-card">
                 <div class="advantages-text">
@@ -78,18 +79,18 @@
                   <p class="advantages-subtitle">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
                 </div>
               </li>
-              <li class="advantages-card">
+              <li class="advantages-card advantages-with-pic">
                 <div class="advantages-text">
                   <h3 class="advantages-title">Там есть мост дьявола</h3>
                   <p class="advantages-subtitle">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, разумеется</p>
                 </div>
-                <img src="images/advantages-devils-bridge.jpg" width="800" height="385" alt="Мост Дьявола">
+                <img class="left-pic-location" src="images/advantages-devils-bridge.jpg" width="800" height="385" alt="Скалистые горы Моста Дьявола в ясную погоду">
               </li>
             </ul>
           </section>
 
           <section class="services">
-            <div class="services-title-container">
+            <div class="title-container services-title-container">
               <h2 class="visually-hidden">Услуги в&nbsp;Седоне</h2>
               <p class="title">Приезжайте в&nbsp;Седону отдохнуть<br> в&nbsp;комфорте и уюте!</p>
               <p class="subtitle">Опытный персонал и&nbsp;качественное обслуживание!</p>
@@ -118,7 +119,7 @@
           </section>
         </div>
 
-        <section class="search" data-test="search">
+        <section class="title-container search" data-test="search">
           <h2 class="visually-hidden">Поиск гостиницы в&nbsp;Седоне</h2>
           <p class="title">Заинтересовались?</p>
           <p class="subtitle">Укажите предполагаемые даты поездки,<br>и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
@@ -131,7 +132,7 @@
             <h2 class="title">
               <label for="subscription">Подпишитесь на&nbsp;рассылку</label>
             </h2>
-            <p class="subtitle">Только полезная информация и&nbsp;никакого спама,<br> честное бойскаутское!</p>
+            <p class="subtitle">Только полезная информация и&nbsp;никакого спама,<br>честное бойскаутское!</p>
             <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="get">
               <input class="email-input" id="subscription" type="email" name="e-mail" placeholder="Ваш e-mail">
               <button class="button button-secondary" type="submit">Подписаться</button>
