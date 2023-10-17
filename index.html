@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="favicon.png" type="image.png">
+    <link rel="icon" href="favicon.png" type="image/png">
   </head>
   <body>
     <div class="container">
@@ -33,7 +33,7 @@
             <span class="visually-hidden">Избранных отелей:</span>
             <span class="favorite-counter">12</span>
           </a>
-          <button class="button button-basic" type="button">Хочу сюда</button>
+          <button class="button button-basic" type="button">Хочу сюда!</button>
         </div>
       </header>
 
@@ -54,12 +54,14 @@
             </div>
 
             <ul class="advantages-list" >
-              <li class="advantages-card advantages-with-pic">
+              <li class="advantages-card advantages-card-wide">
                 <div class="advantages-text">
                   <h3 class="advantages-title">Настоящий городок</h3>
                   <p class="advantages-subtitle">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
-                  <img class="right-pic-location" src="images/advantages-hotel.jpg" width="800" height="385" alt="Отель Седоны с открытой верандой и видом на сад, на фоне гор">
+                <div class="advantages-picture-wrapper">
+                  <img class="advantages-card-picture" src="images/advantages-hotel.jpg" width="800" height="" alt="Отель Седоны с открытой верандой и видом на сад, на фоне гор">
+                </div>
               </li>
               <li class="advantages-card">
                 <div class="advantages-text">
@@ -79,12 +81,14 @@
                   <p class="advantages-subtitle">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
                 </div>
               </li>
-              <li class="advantages-card advantages-with-pic">
+              <li class="advantages-card advantages-card-wide">
                 <div class="advantages-text">
                   <h3 class="advantages-title">Там есть мост дьявола</h3>
                   <p class="advantages-subtitle">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, разумеется</p>
+                </div class="advantages-picture-wrapper">
+                  <img class="advantages-card-picture-reversed" src="images/advantages-devils-bridge.jpg" width="800" height="385" alt="Скалистые горы Моста Дьявола в ясную погоду">
+                <div>
                 </div>
-                <img class="left-pic-location" src="images/advantages-devils-bridge.jpg" width="800" height="385" alt="Скалистые горы Моста Дьявола в ясную погоду">
               </li>
             </ul>
           </section>
