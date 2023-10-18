@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="favicon.png" type="image.png">
+    <link rel="icon" href="favicon.png" type="image/png">
   </head>
   <body>
     <div class="container">
@@ -33,7 +33,7 @@
             <span class="visually-hidden">Избранных отелей:</span>
             <span class="favorite-counter">12</span>
           </a>
-          <button class="button button-basic" type="button">Хочу сюда</button>
+          <button class="button button-basic" type="button">Хочу сюда!</button>
         </div>
       </header>
 
@@ -54,12 +54,14 @@
             </div>
 
             <ul class="advantages-list" >
-              <li class="advantages-card advantages-with-pic">
+              <li class="advantages-card advantages-card-wide">
                 <div class="advantages-text">
                   <h3 class="advantages-title">Настоящий городок</h3>
                   <p class="advantages-subtitle">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
-                  <img class="right-pic-location" src="images/advantages-hotel.jpg" width="800" height="385" alt="Отель Седоны с открытой верандой и видом на сад, на фоне гор">
+                <div class="advantages-picture-wrapper">
+                  <img class="advantages-card-picture" src="images/advantages-hotel.jpg" width="800" height="385" alt="Отель Седоны с открытой верандой и видом на сад, на фоне гор">
+                </div>
               </li>
               <li class="advantages-card">
                 <div class="advantages-text">
@@ -79,12 +81,14 @@
                   <p class="advantages-subtitle">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
                 </div>
               </li>
-              <li class="advantages-card advantages-with-pic">
+              <li class="advantages-card advantages-card-wide">
                 <div class="advantages-text">
                   <h3 class="advantages-title">Там есть мост дьявола</h3>
                   <p class="advantages-subtitle">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, разумеется</p>
                 </div>
-                <img class="left-pic-location" src="images/advantages-devils-bridge.jpg" width="800" height="385" alt="Скалистые горы Моста Дьявола в ясную погоду">
+                <div class="advantages-picture-wrapper advantages-card-picture-reversed">
+                  <img class="advantages-card-picture" src="images/advantages-devils-bridge.jpg" width="800" height="385" alt="Скалистые горы Моста Дьявола в ясную погоду">
+                </div>
               </li>
             </ul>
           </section>
@@ -92,7 +96,7 @@
           <section class="services">
             <div class="title-container services-title-container">
               <h2 class="visually-hidden">Услуги в&nbsp;Седоне</h2>
-              <p class="title">Приезжайте в&nbsp;Седону отдохнуть<br> в&nbsp;комфорте и уюте!</p>
+              <p class="title">Приезжайте в&nbsp;Седону отдохнуть в&nbsp;комфорте и&nbsp;уюте!</p>
               <p class="subtitle">Опытный персонал и&nbsp;качественное обслуживание!</p>
             </div>
 
@@ -161,7 +165,7 @@
         </ul>
         <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a href="https://htmlacademy.ru/">
-          <img class="logo-html-academy" src="images/logo-html-academy.svg" width="115" height="33" alt="Логотип HTML academy">
+          <img src="images/logo-html-academy.svg" width="115" height="33" alt="Логотип HTML academy">
         </a>
       </footer>
       <!-- <script src=""></script> -->
