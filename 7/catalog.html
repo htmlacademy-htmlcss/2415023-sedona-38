@@ -58,15 +58,15 @@
             <fieldset class="infrastructure">
               <legend><h4 class="fieldset-title">Инфраструктура:</h4></legend>
               <ul class="infrastructure-wrapper">
-                <li>
+                <li class="checkbox-item">
                   <input class="checkbox-input" type="checkbox" id="checkbox-pool" name="infrastructure" value="pool" checked>
                   <label class="filter-check" for="checkbox-pool">Бассейн</label>
                 </li>
-                <li>
+                <li class="checkbox-item">
                   <input class="checkbox-input" type="checkbox" id="checkbox-parking" name="infrastructure" value="parking" checked>
                   <label class="filter-check" for="checkbox-parking">Парковка</label>
                 </li>
-                <li>
+                <li class="checkbox-item">
                   <input class="checkbox-input" type="checkbox" id="checkbox-wi-fi"  name="infrastructure" value="wi-fi">
                   <label class="filter-check" for="checkbox-wi-fi">Wi-Fi</label>
                 </li>
@@ -75,23 +75,17 @@
             <fieldset class="housing-type">
               <legend><h4 class="fieldset-title">Тип&nbsp;Жилья:</h4></legend>
               <ul class="housing-type-wrapper">
-                <li>
-                  <label class="filter-radio">
-                    <span class="radiobutton"></span>
-                    <input class="radio-input" type="radio" name="housing-type" value="hotel" checked> Гостиница
-                  </label>
+                <li class="radio-item">
+                  <input class="radio-input" type="radio" id="radio-hotel" name="housing-type" value="hotel" checked>
+                  <label class="filter-radio" for="radio-hotel">Гостиница</label>
                 </li>
-                <li>
-                  <label class="filter-radio">
-                    <span class="radiobutton"></span>
-                    <input class="radio-input" type="radio" name="housing-type" value="motel"> Мотель
-                  </label>
+                <li class="radio-item">
+                  <input class="radio-input" type="radio" id="radio-motel" name="housing-type" value="motel">
+                  <label class="filter-radio" for="radio-motel">Мотель</label>
                 </li>
-                <li>
-                  <label class="filter-radio">
-                    <span class="radiobutton"></span>
-                    <input class="radio-input" type="radio" name="housing-type" value="apartments"> Апартаменты
-                  </label>
+                <li class="radio-item">
+                  <input class="radio-input" type="radio" id="radio-apartments" name="housing-type" value="apartments">
+                  <label class="filter-radio" for="radio-apartments">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
