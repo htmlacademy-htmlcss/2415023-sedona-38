@@ -109,8 +109,8 @@
                   <!-- <span class="visually-hidden">Слайдер фильтра по цене</span> -->
                   <div class="slider-line-no-active"></div>
                   <div class="slider-line-active"></div>
-                  <button class="slider-button slider-button-from"><span class="visually-hidden">Цена от</span></button>
-                  <button class="slider-button slider-button-to"><span class="visually-hidden">Цена до</span></button>
+                  <button class="slider-button slider-button-from" disabled><span class="visually-hidden">Цена от</span></button>
+                  <button class="slider-button slider-button-to" disabled><span class="visually-hidden">Цена до</span></button>
                 </div>
               </div>
             </fieldset>
@@ -130,12 +130,12 @@
             </select>
             <ul class="catalog-view-switcher">
               <li>
-                <button class="view-switcher-button catalog-view-tile" type="button">
+                <button class="view-switcher-button catalog-view-tile active" type="button">
                   <span class="visually-hidden">Отображение карточек плиткой</span>
                 </button>
               </li>
               <li>
-                <button class="view-switcher-button catalog-view-slideshow" type="button">
+                <button class="view-switcher-button catalog-view-slideshow active" type="button">
                   <span class="visually-hidden">Отображение карточек слайдшоу</span>
                 </button>
               </li>
@@ -147,10 +147,10 @@
             </ul>
           </header>
 
-          <ul class="search-results-cards">
-            <li class="hotel-card">
+          <ul class="search-results-card search-results-view-slideshow">
+            <li class="hotel-card slideshow-active">
               <a class="card-img-link" href="#" tabindex="-1">
-                <img class="card-img" src="images/hotels-amara-resort.jpg" width="300" height="212" alt="Вид из скалистой пещеры на звездное небо в ясную погоду">
+                <img class="card-img" src="images/hotel-pictures/hotels-amara-resort.jpg" width="300" height="212" alt="Вид из скалистой пещеры на звездное небо в ясную погоду">
               </a>
               <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Amara Resort & Spa</a></h3>
               <p class="card-price-name">Гостиница</p>
@@ -164,7 +164,7 @@
             </li>
             <li class="hotel-card">
               <a class="card-img-link" href="#" tabindex="-1">
-                <img class="card-img" src="images/hotels-villas-poco-diablo.jpg" width="300" height="212"  alt="Мост Дьявола с расстояния с радугой после дождя">
+                <img class="card-img" src="images/hotel-pictures/hotels-villas-poco-diablo.jpg" width="300" height="212"  alt="Мост Дьявола с расстояния с радугой после дождя">
               </a>
               <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Villas at Poco Diablo</a></h3>
               <p class="card-price-name">Гостиница</p>
@@ -178,7 +178,7 @@
             </li>
             <li class="hotel-card">
               <a class="card-img-link" href="#" tabindex="-1">
-                <img class="card-img" src="images/hotels-quail-inn.jpg" width="300" height="212"  alt="Горы Седоны днем">
+                <img class="card-img" src="images/hotel-pictures/hotels-quail-inn.jpg" width="300" height="212"  alt="Горы Седоны днем">
               </a>
               <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Desert Quail Inn</a></h3>
               <p class="card-price-name">Гостиница</p>
@@ -192,7 +192,7 @@
             </li>
             <li class="hotel-card">
               <a class="card-img-link" href="#" tabindex="-1">
-                <img class="card-img" src="images/hotels-greentree-inn.jpg" width="300" height="212"  alt="Горы Седоны под ночным звездным небом">
+                <img class="card-img" src="images/hotel-pictures/hotels-greentree-inn.jpg" width="300" height="212"  alt="Горы Седоны под ночным звездным небом">
               </a>
               <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">GreenTree Inn</a></h3>
               <p class="card-price-name">Гостиница</p>
@@ -203,6 +203,37 @@
                 <span class="visually-hidden">2 звезды</span>
               </p>
               <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">5,0</span></p>
+            </li>
+
+
+            <!-- Еще два отеля чтоб красиво было -->
+            <li class="hotel-card">
+              <a class="card-img-link" href="#" tabindex="-1">
+                <img class="card-img" src="images/hotel-pictures/skry-ranch-lodge.jpg" width="300" height="212"  alt="Потрясающий вид на горы Седоны с плиточной дорожки отеля с подстриженным газоном и метальным заборчиком">
+              </a>
+              <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Sky Ranch Lodge</a></h3>
+              <p class="card-price-name">Гостиница</p>
+              <p class="card-price-value">от&nbsp;7500&nbsp;₽</p>
+              <button class="button button-basic" type="button">Подробнее</button>
+              <button class="button button-secondary favorite-added" type="button">В&nbsp;избранном</button>
+              <p class="stars five-stars-hotel">
+                <span class="visually-hidden">5 звезд</span>
+              </p>
+              <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">10</span></p>
+            </li>
+            <li class="hotel-card">
+              <a class="card-img-link" href="#" tabindex="-1">
+                <img class="card-img" src="images/hotel-pictures/sedona-charmed.jpg" width="300" height="212"  alt="Заросший дворик отеля">
+              </a>
+              <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Sedona Charmed</a></h3>
+              <p class="card-price-name">Гостиница</p>
+              <p class="card-price-value">от&nbsp;1000&nbsp;₽</p>
+              <button class="button button-basic" type="button">Подробнее</button>
+              <button class="button button-secondary" type="button">В&nbsp;избранное</button>
+              <p class="stars one-star-hotel">
+                <span class="visually-hidden">1 звезда</span>
+              </p>
+              <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">1,0</span></p>
             </li>
           </ul>
 
@@ -264,11 +295,11 @@
           </li>
         </ul>
         <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a href="https://htmlacademy.ru/">
+        <a  href="https://htmlacademy.ru/">
           <img src="images/logo-html-academy.svg" width="115" height="33" alt="Логотип HTML academy">
         </a>
       </footer>
-      <!-- <script src=""></script> -->
+      <script src="card-view-changer-2.js"></script>
     </div>
   </body>
 </html>
