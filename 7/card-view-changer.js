@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Изменяет вид карточек
   let catalogView = document.querySelector('.catalog-view-switcher');
-  let searchResults = document.querySelector('.search-results-card');
+  let searchResults = document.querySelector('.search-results-cards');
   let hotelCards = document.querySelectorAll('.hotel-card');
 
   let tile = document.querySelector('.catalog-view-tile');
@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let allCards = document.querySelectorAll('.search-results-view-slideshow .hotel-card-slideshow');
 
+  let slideshowButtons = document.querySelectorAll('.slideshow-button')
   let slideshowNextButton = document.querySelector('.slideshow-next-button');
   let slideshowPreviousButton = document.querySelector('.slideshow-previous-button');
 
@@ -25,12 +26,16 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let hotelCard of hotelCards) {
       hotelCard.classList.add('hotel-card-tile');
       hotelCard.classList.remove('hotel-card-slideshow', 'hotel-card-list');
-      slideshowPaginationHidden.classList.remove('visually-hidden');
+      slideshowPaginationHidden.classList.remove('display-none');
 
 
       for (let hotelButton of hotelButtons) {
         hotelButton.removeAttribute('tabindex');
       }
+    }
+
+    for (let slideshowButton of slideshowButtons) {
+      slideshowButton.classList.add('display-none');
     }
 
     searchResults.classList.remove('search-results-view-list');
@@ -49,7 +54,10 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let hotelCard of hotelCards) {
       hotelCard.classList.add('hotel-card-slideshow');
       hotelCard.classList.remove('hotel-card-tile', 'hotel-card-list');
-      slideshowPaginationHidden.classList.add('pagination-display-none');
+      slideshowPaginationHidden.classList.add('display-none');
+      for (let slideshowButton of slideshowButtons) {
+      slideshowButton.classList.remove('display-none');
+      }
     }
 
     let hotelButtons = document.querySelectorAll('.search-results-view-slideshow .button');
@@ -83,11 +91,15 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let hotelCard of hotelCards) {
       hotelCard.classList.add('hotel-card-list');
       hotelCard.classList.remove('hotel-card-tile', 'hotel-card-slideshow');
-      slideshowPaginationHidden.classList.remove('visually-hidden');
+      slideshowPaginationHidden.classList.remove('display-none');
 
       for (let hotelButton of hotelButtons) {
         hotelButton.removeAttribute('tabindex');
       }
+    }
+
+    for (let slideshowButton of slideshowButtons) {
+      slideshowButton.classList.add('display-none');
     }
 
     slideshow.classList.remove('active');
