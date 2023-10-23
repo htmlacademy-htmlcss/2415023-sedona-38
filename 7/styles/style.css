@@ -40,10 +40,6 @@ body {
   transform: scale(0);
 }
 
-.text-error {
-  color: rgba(255, 87, 87, 1)
-}
-
 /* заголовки */
 .title {
   font-size: 30px;
@@ -274,6 +270,7 @@ body {
 
 .header-icon-button {
   display: block;
+  position: relative;
   width: 20px;
   height: 20px;
   padding: 22px 12px;
@@ -286,44 +283,45 @@ body {
 
   .header-icon-button:active {
     opacity: 0.3;
-}
+  }
 
   .header-icon-button:focus {
     outline: none;
-}
+  }
 
-.header-search-button {
+  .header-search-button {
   background-image: url(../images/icon-search.svg);
-}
+  }
 
-.header-search-button:hover,
-.header-search-button:focus {
-  background-image: url(../images/icon-search-active.svg);
-}
+  .header-search-button:hover,
+  .header-search-button:focus {
+    background-image: url(../images/icon-search-active.svg);
+  }
 
 
-.header-favorite-button {
-  background-image: url(../images/icon-favorite.svg);
-}
+  .header-favorite-button {
+    background-image: url(../images/icon-favorite.svg);
+  }
 
-.header-favorite-button:hover,
-.header-favorite-button:focus {
-  background-image: url(../images/icon-favorite-active.svg);
-}
+  .header-favorite-button:hover,
+  .header-favorite-button:focus {
+    background-image: url(../images/icon-favorite-active.svg);
+  }
 
-.header-favorite-button:hover .favorite-counter,
-.header-favorite-button:focus .favorite-counter  {
-  background-color: rgb(149, 218, 93);
+  .header-favorite-button:hover .favorite-counter,
+  .header-favorite-button:focus .favorite-counter  {
+    background-color: rgb(149, 218, 93);
 }
 
 .favorite-counter {
   display: flex;
+  position: absolute;
   width: 20px;
   height: 20px;
   justify-content: center;
   align-items: center;
-  margin-top: -10px;
-  margin-left: 9px;
+  top: 11px;
+  left: 21px;
 
   font-size: 10px;
   line-height: 10px;
@@ -341,10 +339,13 @@ body {
 
 /* -- INDEX -- */
 /* hero */
-.hero h1 {
+.hero-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
+  margin: 0;
+  margin-left: 70px;
+  padding-top: 40px;
 }
 
 .hero {
@@ -370,7 +371,6 @@ body {
 	right: 0;
 
 	margin: auto;
-  margin-top: 51.4px;
 }
 
 /* причины */
@@ -384,6 +384,11 @@ body {
 .advantages-title-container {
   margin-bottom: 21px;
   padding: 69px 0;
+}
+
+.services-title {
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .advantages-title-container .title {
@@ -539,7 +544,7 @@ margin: 0;
   background-color: rgba(131, 179, 211, 0.32);
 }
 
-.hotel-filter h1 {
+.hotel-filter-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
@@ -574,11 +579,11 @@ margin: 0;
   text-decoration: none;
   }
 
-  /* .filter-navigation:hover {
-  opacity: 0.6;
-  } */
-
   .filter-navigation:hover {
+  opacity: 0.6;
+  }
+
+  .filter-navigation:focus {
     outline: 3px solid rgb(131, 179, 211);
     }
 
@@ -1134,7 +1139,6 @@ margin: 0;
   border-radius: 5%;
 }
 
-
 .search-results-view-slideshow .slideshow-previous-card,
 .search-results-view-slideshow .slideshow-next-card {
   position: absolute;
@@ -1415,6 +1419,7 @@ margin: 0;
 /* пагинация */
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -1429,10 +1434,12 @@ margin: 0;
 
 .pagination-link {
   display: flex;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  padding: 0 15px;
 
   text-decoration: none;
   color: inherit;
@@ -1640,8 +1647,6 @@ margin: 0;
     color: rgba(117, 97, 87, 0.3);
 }
 
-
-
 /*sticky-footer*/
 body {
   min-height: 100%;
@@ -1657,3 +1662,294 @@ body {
 .main-container {
   flex-grow: 1;
 }
+
+
+
+/* форма поиска гостиницы */
+.popup-search-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+
+  z-index: 5;
+
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.popup-search-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 717px;
+
+  position: absolute;
+  /* top: 396px; */
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 70px;
+  box-sizing: border-box;
+
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+}
+
+.popup-title-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 64px;
+}
+
+.popup-close-button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  margin-right: -18px;
+
+  background-color: rgba(242, 242, 242, 1);
+  background-image: url(../images/icon-x.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+
+  .popup-close-button:hover {
+    background-color: rgba(230, 230, 230, 1);
+  }
+
+  .popup-close-button:focus {
+    outline: 3px solid rgba(131, 179, 211, 1);
+  }
+
+  .popup-close-button:active {
+    background-color: rgba(230, 230, 230, 1);
+    opacity: 0.3;
+}
+
+
+
+.popup-search-list,
+.popup-search-sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.popup-search-sublist {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.popup-search-list-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.popup-search-sublist-item {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 46px;
+  justify-content: space-between;
+}
+
+.popup-label-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+
+  align-self: center;
+}
+
+.popup-input {
+  border-radius: 4px;
+  background-color: rgb(242, 242, 242);
+  border: none;
+  margin-bottom: 4px;
+
+  grid-column: 2;
+  justify-self: end;
+
+  font-family: inherit;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.poput-label-caption {
+  margin: 0;
+  grid-column: 2;
+
+  font-size: 16px;
+  padding: 0 20px;
+}
+
+.text-error {
+  color: rgba(255, 87, 87, 1)
+}
+
+.popup-input::placeholder {
+  font-family: inherit;
+  color: rgba(0, 0, 0, 0.6);
+  opacity: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.popup-date-input {
+  width: 440px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.popup-date-input:hover {
+  background: rgb(230, 230, 230);
+}
+
+.popup-date-input:focus {
+  background: rgb(230, 230, 230);
+  outline: 3px solid rgb(131, 179, 211);
+}
+
+
+.number-input-wrapper {
+  display: flex;
+  position: relative;
+  min-width: 110px;
+  padding: 12px 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(242, 242, 242);
+}
+
+.popup-number-input {
+  text-align: center;
+  padding: 0;
+ }
+
+ .popup-number-input:focus {
+  outline: 3px solid rgba(131, 179, 211, 1);
+ }
+
+ .popup-number-button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  background-repeat: no-repeat;
+  background-color: rgb(242, 242, 242);
+  background-position: center;
+  border: none;
+  opacity: 0.3;
+ }
+
+ .popup-input-minus {
+    background-image: url(../images/icon-minus.svg);
+  }
+
+  .popup-input-plus {
+   background-image: url(../images/icon-plus.svg);
+  }
+
+  .popup-number-button:hover {
+    opacity: 1;
+  }
+
+  .popup-number-button:focus {
+    border-radius: 4px;
+    outline: 3px solid rgb(130, 179, 211);
+    opacity: 1;
+  }
+
+.popup-search-button {
+  width: 100%;
+  margin-top: 48px;
+  padding: 18px 77px;
+
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.popup-hidden {
+  display: none;
+}
+
+
+.popup-label-kids {
+  display: flex;
+  align-items: center;
+}
+
+.popup-label-kids::after {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+
+  content: '';
+
+
+  border-radius: 50%;
+  background-color: rgb(131, 179, 211);
+  background-image: url(../images/icon-info.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.kids-description {
+  position: absolute;
+  transform: scale(1);
+
+  display: block;
+  width: 256px;
+  min-height: 143px;
+  margin: 0;
+  padding: 15px 18px 18px 22px;
+  box-sizing: border-box;
+
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  left: -186px;
+
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  line-height: 20px;
+
+  border-radius: 10px;
+  background: rgb(51, 51, 51);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.kids-description::before {
+  display: block;
+  width: 19px;
+  height: 9px;
+
+  content: '';
+  background-image: url(../images/popup-triangle.svg);
+
+  margin-top: -24px;
+  margin-bottom: 15px;
+  margin-left: 98.5px;
+}
+
+/*.popup-label-kids:hover + .kids-description {
+   transform: scale(0);
+} */  /*почему не работает?*/
