@@ -1673,6 +1673,8 @@ body {
   left: 0;
   right: 0;
 
+  z-index: 5;
+
   background-color: rgba(242, 242, 242, 0.8);
 }
 
@@ -1932,7 +1934,7 @@ body {
 
   border-radius: 10px;
   background: rgb(51, 51, 51);
-  box-shadow: 0 15 30px 0 rgba(0, 0, 0, 0.30);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
 }
 
 .kids-description::before {
