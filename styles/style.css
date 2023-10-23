@@ -85,7 +85,7 @@ body {
     box-shadow: none;
   }
 
-  .button:focus {
+  .button:focus-visible {
     outline: 3px solid rgb(131, 179, 211);
 }
 
@@ -132,7 +132,7 @@ body {
     opacity: 0.6;
   }
 
-  .cancel-button:focus {
+  .cancel-button:focus-visible {
     border-radius: 3px;
     outline: 3px solid #83B3D3;
   }
@@ -196,7 +196,7 @@ body {
   z-index: 2;
 }
 
-.header-logo:focus {
+.header-logo:focus-visible {
     outline: none;
     box-shadow:  1px 1px 4px rgb(131, 179, 211);
   }
@@ -234,7 +234,7 @@ body {
     opacity: 0.6;
   }
 
-  .navigation-link:focus {
+  .navigation-link:focus-visible {
     padding: 20px 16px;
     margin-left: -16px;
     margin-right: -16px;
@@ -256,7 +256,7 @@ body {
   opacity: 0.6;
  }
 
- .nav-current .navigation-link:focus {
+ .nav-current .navigation-link:focus-visible {
    outline: none;
    border-bottom: 2px solid rgba(117, 98, 87, 1);
    box-shadow:  1px 1px 4px rgba(117, 98, 87, 1);
@@ -588,7 +588,7 @@ body {
   opacity: 0.6;
   }
 
-  .filter-navigation:focus {
+  .filter-navigation:focus-visible {
     outline: 3px solid rgb(131, 179, 211);
     }
 
@@ -712,8 +712,8 @@ body {
     background-repeat: no-repeat;
   }
 
- .checkbox-input:focus,
- .radio-input:focus {
+ .checkbox-input:focus-visible,
+ .radio-input:focus-visible {
   outline: 3px solid rgb(131, 179, 211);
 }
 
@@ -797,7 +797,7 @@ body {
   outline: 2px solid rgb(131, 179, 211);
  }
 
- .slider-button:focus {
+ .slider-button:focus-visible {
   outline: 3px solid rgb(131, 179, 211);
 }
 
@@ -900,7 +900,7 @@ body {
   }
 
   .sort-by:hover,
-  .sort-by:focus {
+  .sort-by:focus-visible {
     outline: none;
     border: 2px solid rgb(104, 162, 202);
   }
@@ -938,7 +938,7 @@ body {
     border: 2px solid rgba(0, 0, 0, 1);
   }
 
-  .view-switcher-button:focus {
+  .view-switcher-button:focus-visible {
     outline: none;
     border: 2px solid rgb(104, 162, 202);
   }
@@ -984,6 +984,9 @@ body {
 
 .card-img {
   display: block;
+  width: 300px;
+  height: 212px;
+  object-fit: cover;
 }
 
 .card-title {
@@ -1278,8 +1281,8 @@ body {
     box-shadow: 10px 10px 19px -11px #000000;
   }
 
-  .slideshow-button:focus {
-    outline: 3px solid rgb(104, 162, 202);
+  .slideshow-button:focus-visible {
+    outline: 2px solid rgb(104, 162, 202);
     background-color: rgba(142, 193, 226, 0.5);
     box-shadow: 10px 10px 19px -11px #000000;
   }
@@ -1469,7 +1472,7 @@ body {
   }
 
   .pagination-link:hover,
-  .pagination-link:focus {
+  .pagination-link:focus-visible {
     background-color: rgba(104, 162, 202, 1);
     outline: 1px solid rgba(130, 179, 211, 1);
   }
@@ -1477,6 +1480,7 @@ body {
   .pagination-link:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: rgba(130, 179, 211, 1);
+    outline: none;
 }
 
 .pagination-current .pagination-link{
@@ -1581,8 +1585,6 @@ body {
     opacity: 0.3;
 }
 
-
-
 .social-item-button {
     display: block;
     height: 40px;
@@ -1607,7 +1609,7 @@ body {
     background-image: url(../images/social-youtube.svg);
   }
 
-  .social-item-button:focus {
+  .social-item-button:focus-visible {
     outline: none;
     box-shadow:  1px 1px 4px rgb(131, 179, 211);
 }
@@ -1628,7 +1630,7 @@ body {
     color: rgba(117, 97, 87, 1);
   }
 
-  .main-footer .phone-number:focus {
+  .main-footer .phone-number:focus-visible {
     outline: none;
     padding: 20px;
     margin: -20px;
@@ -1649,7 +1651,7 @@ body {
     font-family: inherit;
   }
 
-  .logo-html-academy:focus {
+  .logo-html-academy:focus-visible {
     outline: none;
     padding: 20px;
     margin: -20px;
@@ -1750,7 +1752,7 @@ body {
     background-color: rgba(230, 230, 230, 1);
   }
 
-  .popup-close-button:focus {
+  .popup-close-button:focus-visible {
     outline: 3px solid rgba(131, 179, 211, 1);
   }
 
@@ -1899,7 +1901,7 @@ body {
     opacity: 1;
   }
 
-  .popup-number-button:focus {
+  .popup-number-button:focus-visible {
     border-radius: 4px;
     outline: 3px solid rgb(130, 179, 211);
     opacity: 1;
@@ -1944,7 +1946,7 @@ body {
 
   display: block;
   width: 256px;
-  min-height: 143px;
+  height: min-content;
   margin: 0;
   padding: 15px 18px 18px 22px;
   box-sizing: border-box;
@@ -1973,7 +1975,7 @@ body {
 
   margin-top: -24px;
   margin-bottom: 15px;
-  margin-left: 98.5px;
+  margin-left: 99px;
 }
 
 /*.popup-label-kids:hover + .kids-description {
