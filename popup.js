@@ -44,18 +44,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
   for (let popupOpen of popupOpens) {
     popupOpen.onclick = function () {
-      popupWrapper.classList.remove('popup-hidden');
+      popupWrapper.classList.remove('display-none');
     }
 
   }
 
   popupClose.onclick = function () {
-    popupWrapper.classList.add('popup-hidden');
+    popupWrapper.classList.add('display-none');
   }
 
   popupWrapper.onclick = function () {
     if (event.target === popupWrapper) {
-      popupWrapper.classList.add('popup-hidden');
+      popupWrapper.classList.add('display-none');
     }
   }
 });
