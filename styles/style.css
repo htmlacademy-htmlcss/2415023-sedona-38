@@ -1641,13 +1641,12 @@ body {
 }
 
 .logo-html-academy {
+    width: 115px;
+    height: 33px;
+
     background-color: transparent;
     border: none;
     font-family: inherit;
-  }
-
-  .logo-html-academy:hover {
-    color: rgb(117, 97, 87);
   }
 
   .logo-html-academy:focus {
@@ -1659,6 +1658,21 @@ body {
 
   .logo-html-academy:active {
     color: rgba(117, 97, 87, 0.3);
+  }
+
+  .logo-html-academy-wrapper {
+    /* color: rgb(117, 97, 87); */
+    fill: rgb(0, 0, 0);
+  }
+
+  .logo-html-academy-svg:hover,
+  .logo-html-academy:focus .logo-html-academy-svg {
+    fill: rgb(117, 97, 87);
+  }
+
+  .logo-html-academy-svg:active {
+    fill: rgb(117, 97, 87);
+    fill-opacity: 0.3;
 }
 
 /*sticky-footer*/
