@@ -10,7 +10,7 @@
     <div class="container">
       <header class="main-header" data-test="header">
         <a class="header-logo" href="index.html" aria-current="page" tabindex="-1">
-          <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
+          <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -26,7 +26,7 @@
           </ul>
         </nav>
         <div class="user-communication">
-          <a href="#" class="header-icon-button header-search-button">
+          <a href="#" class="header-icon-button header-search-button popup-open-button">
             <span class="visually-hidden">Поиск</span>
           </a>
           <a href="#" class="header-icon-button header-favorite-button">
@@ -39,16 +39,16 @@
 
       <main class="main-container" data-test="main" >
         <section class="hero" data-test="hero">
-          <h1 class="visually-hidden">О&nbsp;Седоне</h1>
+          <h1 class="visually-hidden hero-title">О&nbsp;Седоне</h1>
           <div class="hero-img-container">
-            <img class="hero-frontground-image" src="images/hero-foreground.svg" width="485" height="352" alt="Welcome to the gorgeous Sedona.<br> &quot;Because the Grand Canyon sucks!&quot;">
+            <img class="hero-frontground-image" src="images/hero-foreground.svg" width="485" height="352" alt="Welcome to the gorgeous Sedona.&quot;Because the Grand Canyon sucks!&quot;">
           </div>
         </section>
 
         <div class="advantages" data-test="advantages">
           <section class="about">
             <div class="title-container advantages-title-container">
-              <h2 class="visually-hidden">Преимущества города Седоны</h2>
+              <h2 class="visually-hidden title">Преимущества города Седоны</h2>
               <p class="title">Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!</p>
               <p class="subtitle">Рассмотрим причины, по&nbsp;которым Седона круче, чем Гранд-Каньон!</p>
             </div>
@@ -60,7 +60,7 @@
                   <p class="advantages-subtitle">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
                 <div class="advantages-picture-wrapper">
-                  <img class="advantages-card-picture" src="images/advantages-hotel.jpg" width="800" height="385" alt="Отель Седоны с открытой верандой и видом на сад, на фоне гор">
+                  <img class="advantages-card-picture" src="images/advantages-hotel.jpg" width="800" height="385" alt="Отель Седоны с открытой верандой и видом на сад, на фоне гор.">
                 </div>
               </li>
               <li class="advantages-card">
@@ -87,7 +87,7 @@
                   <p class="advantages-subtitle">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, разумеется</p>
                 </div>
                 <div class="advantages-picture-wrapper advantages-card-picture-reversed">
-                  <img class="advantages-card-picture" src="images/advantages-devils-bridge.jpg" width="800" height="385" alt="Скалистые горы Моста Дьявола в ясную погоду">
+                  <img class="advantages-card-picture" src="images/advantages-devils-bridge.jpg" width="800" height="385" alt="Скалистые горы Моста Дьявола в ясную погоду.">
                 </div>
               </li>
             </ul>
@@ -95,7 +95,7 @@
 
           <section class="services">
             <div class="title-container services-title-container">
-              <h2 class="visually-hidden">Услуги в&nbsp;Седоне</h2>
+              <h2 class="visually-hidden services-title">Услуги в&nbsp;Седоне</h2>
               <p class="title">Приезжайте в&nbsp;Седону отдохнуть в&nbsp;комфорте и&nbsp;уюте!</p>
               <p class="subtitle">Опытный персонал и&nbsp;качественное обслуживание!</p>
             </div>
@@ -104,7 +104,7 @@
               <li class="service-card service-housing">
                 <div class="services-text">
                   <h3 class="service-title">Жильё</h3>
-                  <p class="service-subtitle">Рекомендуем пожить в&nbsp;настоящем мотеле, всё как в&nbsp;кино! </p>
+                  <p class="service-subtitle">Рекомендуем пожить в&nbsp;настоящем мотеле, всё как в&nbsp;кино!</p>
                 </div>
               </li>
               <li class="service-card service-food">
@@ -124,10 +124,10 @@
         </div>
 
         <section class="title-container search" data-test="search">
-          <h2 class="visually-hidden">Поиск гостиницы в&nbsp;Седоне</h2>
+          <h2 class="visually-hidden title">Поиск гостиницы в&nbsp;Седоне</h2>
           <p class="title">Заинтересовались?</p>
           <p class="subtitle">Укажите предполагаемые даты поездки,<br>и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
-          <button class="button button-basic" type="button">Поиск гостиницы в&nbsp;Седоне</button>
+          <button class="button button-basic popup-open-button" type="button">Поиск гостиницы в&nbsp;Седоне</button>
         </section>
 
 
@@ -168,7 +168,51 @@
           <img src="images/logo-html-academy.svg" width="115" height="33" alt="Логотип HTML academy">
         </a>
       </footer>
-      <!-- <script src=""></script> -->
+
+      <div class="popup-search-wrapper popup-hidden">
+        <section class="popup-search-container">
+          <div class="popup-title-container">
+            <h2 class="title popup-title">Форма поиска гостиницы</h2>
+            <button class="popup-close-button" type="button"></button>
+          </div>
+          <form class="popup-search-form" action="https://echo.htmlacademy.ru/" method="get">
+              <ul class="popup-search-list">
+                <li class="popup-search-list-item">
+                  <label class="popup-label-text" for="check-in-date">Дата&nbsp;заезда:</label>
+                    <input class="popup-input popup-date-input" id="check-in-date" type="text" name="check-in-date" placeholder="27 апреля 2020">
+                    <p class="poput-label-caption text-error">Мы не можем отправить вас в прошлое.</p>
+                </li>
+                <li class="popup-search-list-item">
+                  <label class="popup-label-text" for="check-out-date">Дата&nbsp;выезда:</label>
+                  <input class="popup-input popup-date-input" id="check-out-date" type="text" name="check-out-date" placeholder="1 сентября 2023">
+                  <p class="poput-label-caption">На эти даты есть свободные номера. Пока есть.</p>
+                </li>
+                <ul class="popup-search-sublist">
+                  <li class="popup-search-sublist-item">
+                    <label class="popup-label-text" for="adults">Взрослые:</label>
+                    <div class="number-input-wrapper">
+                      <button class="popup-number-button popup-input-minus" id="adults-minus" type="button"></button>
+                      <input class="popup-input popup-number-input" id="adults" type="text" size="3" name="adults" placeholder="2">
+                      <button class="popup-number-button popup-input-plus" id="adults-plus" type="button"></button>
+                    </div>
+                  </li>
+                  <li class="popup-search-sublist-item">
+                    <label class="popup-label-text popup-label-kids" for="children">Дети:</label>
+                    <div class="number-input-wrapper">
+                      <button class="popup-number-button popup-input-minus" id="children-minus" type="button"></button>
+                      <input class="popup-input popup-number-input" id="children" type="text" size="3" name="children" placeholder="2">
+                      <button class="popup-number-button popup-input-plus" id="children-plus" type="button"></button>
+                      <p class="kids-description">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                    </div>
+                  </li>
+                </ul>
+              </ul>
+            <button class="button button-secondary popup-search-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+
+     <script src="popup.js"></script>
     </div>
   </body>
 </html>

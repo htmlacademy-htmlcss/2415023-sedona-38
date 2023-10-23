@@ -179,4 +179,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
     }
+
+    // Сортировка карточек
+    // let selectSortBy = document.querySelector('.sort-by')
+    // let hotelPrices = document.querySelectorAll('.hotel-price')
+
+    // selectSortBy.addEventListener('change', function() {
+    //   let selectedValue = selectSortBy.value;
+
+    //   if (selectedValue === 'first-cheapest') {
+    //     console.log('Cheapest first');
+
+    //   } else if (selectedValue === 'first-expensive') {
+    //     console.log('Expensive first');
+    //   }
+    // });
 });

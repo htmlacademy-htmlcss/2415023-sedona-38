@@ -26,7 +26,7 @@
           </ul>
         </nav>
         <div class="user-communication">
-          <a href="#" class="header-icon-button header-search-button">
+          <a href="#" class="header-icon-button header-search-button popup-open-button">
             <span class="visually-hidden">Поиск</span>
           </a>
           <a href="#" class="header-icon-button header-favorite-button">
@@ -39,7 +39,7 @@
 
       <main class="main-container" data-test="main">
         <section class="hotel-filter" data-test="filter">
-          <h1>Гостиницы Седоны</h1>
+          <h1 class="hotel-filter-title">Гостиницы Седоны</h1>
           <ul class="hotel-filter-paginator">
             <li class="filter-paginator-item">
               <a href="index.html" class="filter-navigation main-icon" title="На главную">
@@ -119,8 +119,8 @@
           <header class="search-results-header">
             <h2 class="title">Найдено гостиниц: <span class="search-results-number">38</span></h2>
             <select class="sort-by" name="sort-by" aria-label="Фильтр по цене">
-              <option value="cheapest">Сначала дешевые</option>
-              <option value="cheapest">Сначала дорогие</option>
+              <option value="first-cheapest">Сначала дешевые</option>
+              <option value="first-expensive">Сначала дорогие</option>
             </select>
             <ul class="catalog-view-switcher">
               <li>
@@ -148,7 +148,7 @@
               </a>
               <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Amara Resort&nbsp;&&nbsp;Spa </a></h3>
               <p class="card-price-name">Гостиница</p>
-              <p class="card-price-value">от&nbsp;4000&nbsp;₽</p>
+              <p class="card-price-value">от&nbsp;<span class="hotel-price">4000</span>&nbsp;₽</p>
               <button class="button button-basic" type="button">Подробнее</button>
               <button class="button button-secondary" type="button">В&nbsp;избранное</button>
               <p class="stars four-stars-hotel">
@@ -162,7 +162,7 @@
               </a>
               <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Villas at Poco Diablo </a></h3>
               <p class="card-price-name">Гостиница</p>
-              <p class="card-price-value">от&nbsp;5000&nbsp;₽</p>
+              <p class="card-price-value">от&nbsp;<span class="hotel-price">5000</span>&nbsp;₽</p>
               <button class="button button-basic" type="button">Подробнее</button>
               <button class="button button-secondary favorite-added" type="button">В&nbsp;избранном</button>
               <p class="stars four-stars-hotel">
@@ -176,7 +176,7 @@
               </a>
               <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Desert Quail Inn</a></h3>
               <p class="card-price-name">Гостиница</p>
-              <p class="card-price-value">от&nbsp;2500&nbsp;₽</p>
+              <p class="card-price-value">от&nbsp;<span class="hotel-price">2500</span>&nbsp;₽</p>
               <button class="button button-basic" type="button">Подробнее</button>
               <button class="button button-secondary" type="button">В&nbsp;избранное</button>
               <p class="stars three-stars-hotel">
@@ -190,7 +190,7 @@
               </a>
               <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">GreenTree Inn</a></h3>
               <p class="card-price-name">Гостиница</p>
-              <p class="card-price-value">от&nbsp;1500&nbsp;₽</p>
+              <p class="card-price-value">от&nbsp;<span class="hotel-price">1500</span>&nbsp;₽</p>
               <button class="button button-basic" type="button">Подробнее</button>
               <button class="button button-secondary" type="button">В&nbsp;избранное</button>
               <p class="stars two-stars-hotel">
@@ -198,7 +198,7 @@
               </p>
               <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">5,0</span></p>
             </li>
-            <button class="slideshow-button slideshow-previous-button" type="button""></button>
+            <button class="slideshow-button slideshow-previous-button" type="button"></button>
             <button class="slideshow-button slideshow-next-button" type="button"></button>
           </ul>
 
@@ -264,8 +264,52 @@
           <img src="images/logo-html-academy.svg" width="115" height="33" alt="Логотип HTML academy">
         </a>
       </footer>
+
+      <div class="popup-search-wrapper popup-hidden">
+        <section class="popup-search-container">
+          <div class="popup-title-container">
+            <h2 class="title popup-title">Форма поиска гостиницы</h2>
+            <button class="popup-close-button" type="button"></button>
+          </div>
+          <form class="popup-search-form" action="https://echo.htmlacademy.ru/" method="get">
+              <ul class="popup-search-list">
+                <li class="popup-search-list-item">
+                  <label class="popup-label-text" for="check-in-date">Дата&nbsp;заезда:</label>
+                    <input class="popup-input popup-date-input" id="check-in-date" type="text" name="check-in-date" placeholder="27 апреля 2020">
+                    <p class="poput-label-caption text-error">Мы не можем отправить вас в прошлое.</p>
+                </li>
+                <li class="popup-search-list-item">
+                  <label class="popup-label-text" for="check-out-date">Дата&nbsp;выезда:</label>
+                  <input class="popup-input popup-date-input" id="check-out-date" type="text" name="check-out-date" placeholder="1 сентября 2023">
+                  <p class="poput-label-caption">На эти даты есть свободные номера. Пока есть.</p>
+                </li>
+                <ul class="popup-search-sublist">
+                  <li class="popup-search-sublist-item">
+                    <label class="popup-label-text" for="adults">Взрослые:</label>
+                    <div class="number-input-wrapper">
+                      <button class="popup-number-button popup-input-minus" id="adults-minus" type="button"></button>
+                      <input class="popup-input popup-number-input" id="adults" type="text" size="3" name="adults" placeholder="2">
+                      <button class="popup-number-button popup-input-plus" id="adults-plus" type="button"></button>
+                    </div>
+                  </li>
+                  <li class="popup-search-sublist-item">
+                    <label class="popup-label-text popup-label-kids" for="children">Дети:</label>
+                    <div class="number-input-wrapper">
+                      <button class="popup-number-button popup-input-minus" id="children-minus" type="button"></button>
+                      <input class="popup-input popup-number-input" id="children" type="text" size="3" name="children" placeholder="2">
+                      <button class="popup-number-button popup-input-plus" id="children-plus" type="button"></button>
+                      <p class="kids-description">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                    </div>
+                  </li>
+                </ul>
+              </ul>
+            <button class="button button-secondary popup-search-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+
       <script src="card-view-changer.js"></script>
-      <!-- <script src="slider-changer.js"></script> -->
+      <script src="popup.js"></script>
     </div>
   </body>
 </html>
