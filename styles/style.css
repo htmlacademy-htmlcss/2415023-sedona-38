@@ -147,7 +147,6 @@ body {
   }
 
   .cancel-button:focus-visible {
-    border-radius: 3px;
     outline: var(--focus-outline) var(--brand-basic-lighter);
   }
 
