@@ -50,7 +50,7 @@ body {
 
   --tiny-outline: 1px solid;
   --medium-outline: 2px solid;
-  --fokus-outline: 3px solid;
+  --focus-outline: 3px solid;
 
   --active-opacity: 0.3;
   --hover-opacity: 0.6;
@@ -100,7 +100,7 @@ body {
   }
 
   .button:focus-visible {
-    outline: var(--fokus-outline) rgb(var(--brand-basic-lighter));
+    outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
 }
 
   .button:disabled {
@@ -148,7 +148,7 @@ body {
 
   .cancel-button:focus-visible {
     border-radius: 3px;
-    outline: var(--fokus-outline) var(--brand-basic-lighter);
+    outline: var(--focus-outline) var(--brand-basic-lighter);
   }
 
   .cancel-button:active {
@@ -618,7 +618,7 @@ body {
   }
 
   .filter-navigation:focus-visible {
-    outline: var(--fokus-outline) rgb(var(--brand-basic-lighter));
+    outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
     }
 
   .filter-navigation:active {
@@ -720,7 +720,7 @@ body {
   height: 20px;
   margin: 0;
 
-  background-color: white ;
+  background-color: rgb(255, 255, 255);
  }
 
   .checkbox-input {
@@ -743,7 +743,7 @@ body {
 
  .checkbox-input:focus-visible,
  .radio-input:focus-visible {
-  outline: var(--fokus-outline) rgb(var(--brand-basic-lighter));
+  outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
 }
 
 /* стоимость */
@@ -781,7 +781,7 @@ body {
   }
 
   .price-input:focus {
-    outline: var(--fokus-outline) rgb(var(--brand-basic-lighter));
+    outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
 }
 
 .price-input-from {
@@ -829,7 +829,7 @@ body {
  }
 
  .slider-button:focus-visible {
-  outline: var(--fokus-outline) rgb(var(--brand-basic-lighter));
+  outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
 }
 
 
@@ -1579,7 +1579,7 @@ body {
   }
 
   .email-input:focus {
-    outline: var(--fokus-outline) rgb(var(--brand-basic-lighter));
+    outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
   }
 
   .email-input::placeholder {
@@ -1801,7 +1801,7 @@ body {
   }
 
   .popup-close-button:focus-visible {
-    outline: var(--fokus-outline) rgb(var(--brand-basic-lighter));
+    outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
   }
 
   .popup-close-button:active {
@@ -1901,7 +1901,7 @@ body {
 
 .popup-date-input:focus {
   background-color: rgb(230, 230, 230);
-  outline: var(--fokus-outline) rgb(var(--brand-basic-lighter));
+  outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
 }
 
 
@@ -1923,7 +1923,7 @@ body {
  }
 
  .popup-number-input:focus {
-  outline: var(--fokus-outline) rgb(var(--brand-basic-lighter));
+  outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
  }
 
   .popup-number-button {
@@ -1952,7 +1952,7 @@ body {
 
   .popup-number-button:focus-visible {
     border-radius: var(--border-radius);
-    outline: var(--fokus-outline) rgb(var(--brand-basic-color));
+    outline: var(--focus-outline) rgb(var(--brand-basic-color));
     opacity: 1;
   }
 
