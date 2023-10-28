@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
   </head>
   <body>
     <div class="container">
@@ -138,7 +138,7 @@
             </h2>
             <p class="subtitle">Только полезная информация и&nbsp;никакого спама,<br>честное бойскаутское!</p>
             <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="get">
-              <input class="email-input" id="subscription" type="email" name="e-mail" placeholder="Ваш e-mail">
+              <input class="input email-input" id="subscription" type="email" name="e-mail" placeholder="Ваш e-mail" required>
               <button class="button button-secondary" type="submit">Подписаться</button>
             </form>
           </div>
@@ -165,7 +165,7 @@
         </ul>
         <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="logo-html-academy" href="https://htmlacademy.ru/">
-          <svg class="logo-html-academy-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="115" height="34" viewBox="0 0 115 34" fill="black" >
+          <svg class="logo-html-academy-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип HTML academy." width="115" height="34" viewBox="0 0 115 34" fill="black" >
             <path d="M0 13.2564V15.8564H2.5V13.2564H0Z"/>
             <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z"/>
             <path d="M26.6 5.15645H21.8V1.45645H19.8V5.25645H17.9V7.25645H19.8V13.2564C19.8 14.9564 20.8 15.9564 22.5 15.9564H26.6V13.9564H22.9C22.2 13.9564 21.8 13.5564 21.8 12.8564V7.15645H26.6V5.15645Z"/>
@@ -179,7 +179,6 @@
             <path d="M98.2 18.2564C96.6 18.2564 95.3 19.0564 94.6 20.2564H94.5C93.9 19.0564 92.7 18.2564 91.1 18.2564C89.7 18.2564 88.6 18.9564 88 20.0564V18.5564H86.1V29.1564H88.1V23.7564C88.1 21.7564 89.1 20.3564 90.7 20.2564C92.2 20.2564 93.1 21.2564 93.1 22.8564V29.1564H95.1V23.5564C95.1 21.1564 96.5 20.2564 97.7 20.2564C99.2 20.2564 100.1 21.2564 100.1 22.8564V29.1564H102.1V22.6564C102.2 20.0564 100.7 18.2564 98.2 18.2564Z"/>
             <path d="M109.4 27.3564L105.8 18.4564H103.6L108.4 30.0564C108.1 30.9564 107.7 31.2564 106.7 31.2564H104.2V33.2564H106.7C108.5 33.2564 109.5 32.4564 110.2 30.6564L114.9 18.4564H112.8L109.4 27.3564Z"/>
           </svg>
-          <span class="visually-hidden">Логотип HTML academy</span>
         </a>
       </footer>
 
@@ -193,12 +192,12 @@
               <ul class="popup-search-list">
                 <li class="popup-search-list-item">
                   <label class="popup-label-text" for="check-in-date">Дата&nbsp;заезда:</label>
-                    <input class="popup-input popup-date-input" id="check-in-date" type="text" name="check-in-date" value="27 апреля 2020" placeholder="27 апреля 2020">
+                    <input class="popup-input popup-date-input" id="check-in-date" type="text" name="check-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" required>
                     <p class="popup-label-caption text-error">Мы не можем отправить вас в прошлое.</p>
                 </li>
                 <li class="popup-search-list-item">
                   <label class="popup-label-text" for="check-out-date">Дата&nbsp;выезда:</label>
-                  <input class="popup-input popup-date-input" id="check-out-date" type="text" name="check-out-date" value="1 сентября 2023" placeholder="1 сентября 2023">
+                  <input class="popup-input popup-date-input" id="check-out-date" type="text" name="check-out-date" value="1 сентября 2023" placeholder="1 сентября 2023" required>
                   <p class="popup-label-caption">На эти даты есть свободные номера. Пока есть.</p>
                 </li>
                 <li>
@@ -207,7 +206,7 @@
                       <label class="popup-label-text" for="adults">Взрослые:</label>
                       <div class="number-input-wrapper">
                         <button class="popup-number-button popup-input-minus" id="adults-minus" type="button"></button>
-                        <input class="popup-input popup-number-input" id="adults" type="text" size="3" name="adults" value="2" placeholder="2">
+                        <input class="popup-input popup-number-input" id="adults" type="text" size="3" name="adults" value="2" placeholder="2" required>
                         <button class="popup-number-button popup-input-plus" id="adults-plus" type="button"></button>
                       </div>
                     </li>
