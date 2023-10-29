@@ -341,8 +341,8 @@ body {
     background-color: rgb(var(--disabled-color));
 }
 
-.header-icon-button:before {
-  content: '';
+.header-icon-button::before {
+  content: "";
   display: block;
   width: 44px;
   height: 44px;
@@ -353,17 +353,17 @@ body {
   mask: var(--header-icon) no-repeat center;
 }
 
-.header-icon-button:hover:before,
-.header-icon-button:focus:before {
+.header-icon-button:hover::before,
+.header-icon-button:focus::before {
   background-color: rgb(var(--brand-basic-lighter));
 }
 
-.header-favorite-button:hover:before,
-.header-favorite-button:focus:before {
+.header-favorite-button:hover::before,
+.header-favorite-button:focus::before {
   background-color: rgb(255, 0, 0);
 }
 
-.header-icon-button:disabled:before {
+.header-icon-button:disabled::before {
   background-color: rgb(var(--disabled-color));
 }
 
@@ -1032,12 +1032,12 @@ body {
     border: var(--medium-outline) rgb(104, 162, 202);
   }
 
-  .view-switcher-button:disabled:before {
+  .view-switcher-button:disabled::before {
     background-color: rgb(var(--disabled-color));
   }
 
-  .view-switcher-button:before {
-    content: '';
+  .view-switcher-button::before {
+    content: "";
     display: block;
     width: 46px;
     height: 46px;
@@ -1225,7 +1225,7 @@ body {
   }
 
   .search-results-view-slideshow::before {
-    content: ' ';
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -1399,7 +1399,7 @@ body {
 }
 
 .slideshow-button::before {
-  content: '';
+  content: "";
   display: block;
   min-width: 172px;
   height: 562px;
@@ -1708,8 +1708,8 @@ body {
     align-items: center;
   }
 
-  .social-item-button:before {
-    content: '';
+  .social-item-button::before {
+    content: "";
     display: block;
     width: 40px;
     height: 40px;
@@ -1732,8 +1732,8 @@ body {
     --social-icon: url(../images/social-youtube.svg);
   }
 
-  .social-item-button:hover:before,
-  .social-item-button:focus:before {
+  .social-item-button:hover::before,
+  .social-item-button:focus::before {
     background-color: rgb(104, 162, 202);
   }
 
@@ -1742,7 +1742,7 @@ body {
     box-shadow:  1px 1px 4px rgb(var(--brand-basic-lighter));
   }
 
-  .social-item-button:active:before {
+  .social-item-button:active::before {
     background-color: rgb(104, 162, 202);
     opacity: var(--active-opacity);
 }
@@ -2058,7 +2058,7 @@ body {
   height: 26px;
   margin-left: 10px;
 
-  content: '';
+  content: "";
 
   border-radius: 50%;
   background-color: rgb(var(--brand-basic-lighter));
@@ -2098,7 +2098,7 @@ body {
   width: 19px;
   height: 9px;
 
-  content: '';
+  content: "";
   background-image: url(../images/popup-triangle.svg);
 
   margin-top: -29px;
