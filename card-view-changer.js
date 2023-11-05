@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let hotelCard of hotelCards) {
       hotelCard.classList.add('hotel-card-tile');
-      hotelCard.classList.remove('hotel-card-slideshow', 'hotel-card-list');
+      hotelCard.classList.remove('hotel-card-slideshow', 'hotel-card-list', 'slideshow-active-card', 'slideshow-next-card', 'slideshow-previous-card');
       slideshowPaginationHidden.classList.remove('display-none');
 
 
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let hotelCard of hotelCards) {
       hotelCard.classList.add('hotel-card-list');
-      hotelCard.classList.remove('hotel-card-tile', 'hotel-card-slideshow');
+      hotelCard.classList.remove('hotel-card-tile', 'hotel-card-slideshow', 'slideshow-active-card', 'slideshow-next-card', 'slideshow-previous-card');
       slideshowPaginationHidden.classList.remove('display-none');
 
       for (let hotelButton of hotelButtons) {
