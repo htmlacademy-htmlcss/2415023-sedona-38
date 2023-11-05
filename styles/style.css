@@ -56,6 +56,9 @@ body {
 
   --active-opacity: 0.3;
   --hover-opacity: 0.6;
+
+  --slider-width: 288px;
+  --slider-color: 255, 255, 255;
 }
 
 /* заголовки */
@@ -90,6 +93,7 @@ body {
     font-weight: 700;
     color: rgb(255, 255, 255, 1);
     text-transform: uppercase;
+    text-align: center;
 
     border: none;
     border-radius: var(--border-radius);
@@ -103,7 +107,7 @@ body {
 
   .button:focus-visible {
     outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
-}
+  }
 
   .button:disabled {
     background-color: rgb(var(--disabled-color));
@@ -187,6 +191,13 @@ body {
   color: rgb(255, 255, 255);
 }
 
+
+.button.disabled {
+  background-color: rgb(var(--disabled-color));
+  pointer-events: none;
+  cursor: default;
+}
+
 /* -- ОСНОВНАЯ СТИЛИЗАЦИЯ -- */
 .container {
   width: 1200px;
@@ -254,7 +265,6 @@ body {
     color: inherit;
 
     text-decoration: none;
-    text-transform: capitalize;
     background-color: transparent;
     border: none;
   }
@@ -295,10 +305,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 400px;
-  margin-left: auto;
+  margin: 10px 0 10px auto;
   justify-content: flex-end;
   align-items: center;
-  align-self: center;
+  align-self: start;
   text-align: center;
 }
 
@@ -522,7 +532,8 @@ body {
 
 .advantages-card-picture {
   display: block;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
 }
 
 .advantages-card-picture-reversed {
@@ -709,13 +720,12 @@ body {
 .fieldset:disabled .check-or-radio-input,
 .fieldset:disabled .check-or-radio-label,
 .check-or-radio-input:disabled,
-.check-or-radio-input:disabled ~ .check-or-radio-label {
+.check-or-radio-input:disabled + .check-or-radio-label {
   opacity: var(--disabled-opacity);
 }
 
 
-.filter-check,
-.filter-radio {
+.check-or-radio-label {
   font-size: 18px;
   line-height: 23px;
   color: rgb(255, 255, 255);
@@ -748,6 +758,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+  width: 157px;
   }
 
   .checkbox-item:hover,
@@ -760,11 +771,10 @@ body {
     opacity: var(--active-opacity);
 }
 
-.checkbox-input,
-.radio-input {
+.check-or-radio-input {
   appearance: none;
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   margin: 0;
 
   background-color: rgb(255, 255, 255);
@@ -857,19 +867,49 @@ body {
 .slider {
   display: flex;
   position: relative;
-  width: 288px;
+  width: var(--slider-width);
   height: 20px;
   margin-top: 34px;
+
+  background-image: linear-gradient(transparent 7.5px, white 25%, white 50%, transparent 50%); /*******************************************/
 }
+
+.slider-scale {
+  position: relative;
+  width: 75%;
+  height: 5px;
+  background-color: rgb(var(--slider-color), 1);
+	margin: auto;
+  margin-left: 0;
+}
+
+/* .slider-scale::before {
+  display: block;
+ content: "";
+ width: var(--slider-width);
+ height: 100%;
+ background-color: rgb(var(--slider-color), 0.3);
+} */
 
 .slider-button {
   display: block;
+  position: absolute;
+  top: -8px;
   width: 20px;
   height: 20px;
-  background-color: rgb(255, 255, 255, 1);
+
+  background-color: rgb(var(--slider-color),  1);
   border: none;
   border-radius: 5px;
  }
+
+ .slider-button-from {
+   left: 0;
+  }
+
+ .slider-button-to {
+   right: 0;
+  }
 
  .slider-button:active {
   outline: var(--medium-outline) rgb(var(--brand-basic-lighter));
@@ -879,48 +919,11 @@ body {
   outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
 }
 
-
-.slider-line-no-active {
-  position: absolute;
-  width: 100%;
-  height: 5px;
-
-  top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-
-  background-color: rgb(255, 255, 255, 1);
-  opacity: 0.3;
-}
-
-.slider-line-active {
-  position: absolute;
-  width: 75%;
-  height: 5px;
-  background-color: rgb(255, 255, 255, 1);;
-  top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-  margin-left: 0;
-}
-
-.slider-button-from {
-  position: absolute;
-}
-
-.slider-button-to {
-  position: absolute;
-  left: 206px;
-}
-
 .form-button-wrapper {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+  margin-top: 56px;
+  align-self: flex-start;
   gap: 32px;
 }
 
@@ -929,7 +932,7 @@ body {
 }
 
 .fieldset:disabled .slider-button,
-.fieldset:disabled .slider-line {
+.fieldset:disabled .range-scale {
   background-color: rgb(var(--disabled-color), var(--disabled-opacity));
 }
 
@@ -1584,7 +1587,7 @@ body {
   }
 
   .pagination-link:hover,
-  .pagination-link:focus-visible {
+  .pagination-link:focus {
     background-color: rgb(104, 162, 202, 1);
     outline: var(--tiny-outline) rgb(var(--brand-basic-color));
   }
@@ -1840,7 +1843,8 @@ body {
   width: 717px;
 
   position: absolute;
-  top: 396px;
+  /* top: 396px; */
+  top: 100px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -1888,13 +1892,14 @@ body {
   .popup-close-button:active {
     background-color: rgb(230, 230, 230, 1);
     opacity: var(--active-opacity);
- }
+}
 
-.popup-search-list,
-.popup-search-sublist {
-  display: flex;
-  flex-direction: column;
-  gap: 23px;
+/* форма поиска */
+.popup-search-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 88px;
+  row-gap: 23px;
 
   margin: 0;
   padding: 0;
@@ -1902,22 +1907,13 @@ body {
   list-style: none;
 }
 
-.popup-search-sublist {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.popup-search-list-item-bigger {
+  grid-column: span 2;
 }
 
 .popup-search-list-item {
   display: grid;
   grid-template-columns: 1fr auto;
-}
-
-.popup-search-sublist-item {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 46px;
-  justify-content: space-between;
 }
 
 .popup-label-text {
@@ -1933,9 +1929,6 @@ body {
   border-radius: var(--border-radius);
   background-color: rgb(242, 242, 242);
   border: none;
-
-  grid-column: 2;
-  justify-self: end;
 
   font-family: inherit;
   color: inherit;
@@ -1963,7 +1956,6 @@ body {
   opacity: 1;
   font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
 }
 
 .popup-date-input {

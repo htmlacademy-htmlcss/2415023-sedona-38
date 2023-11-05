@@ -26,11 +26,11 @@
           </ul>
         </nav>
         <div class="user-communication">
-          <button class="header-icon-button header-search-button popup-open-button" type="button">
-            <span class="visually-hidden">Поиск</span>
+          <button class="header-icon-button header-search-button" type="button">
+            <span class="visually-hidden">Найти на сайте</span>
           </button>
-          <a href="#" class="header-icon-button header-favorite-button">
-            <span class="visually-hidden">Избранных отелей:</span>
+          <a class="header-icon-button header-favorite-button" href="#" >
+            <span class="visually-hidden">Количество отелей, добавленных в избранное:</span>
             <span class="favorite-counter">12</span>
           </a>
           <button class="button button-basic" type="button">Хочу сюда!</button>
@@ -165,7 +165,7 @@
         </ul>
         <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="logo-html-academy" href="https://htmlacademy.ru/">
-          <svg class="logo-html-academy-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип HTML academy." width="115" height="34" viewBox="0 0 115 34" fill="black" >
+          <svg class="logo-html-academy-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип HTML academy." aria-hidden="true" fokusable="false" width="115" height="34" viewBox="0 0 115 34" fill="black" >
             <path d="M0 13.2564V15.8564H2.5V13.2564H0Z"/>
             <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z"/>
             <path d="M26.6 5.15645H21.8V1.45645H19.8V5.25645H17.9V7.25645H19.8V13.2564C19.8 14.9564 20.8 15.9564 22.5 15.9564H26.6V13.9564H22.9C22.2 13.9564 21.8 13.5564 21.8 12.8564V7.15645H26.6V5.15645Z"/>
@@ -182,7 +182,7 @@
         </a>
       </footer>
 
-      <div class="popup-search-wrapper display-none">
+      <div class="popup-search-wrapper" <!-- display-none" -->>
         <section class="popup-search-container">
           <div class="popup-title-container">
             <h2 class="title popup-title">Поиск гостиницы в Седоне</h2>
@@ -190,37 +190,33 @@
           </div>
           <form class="popup-search-form" action="https://echo.htmlacademy.ru/" method="get">
               <ul class="popup-search-list">
-                <li class="popup-search-list-item">
+                <li class="popup-search-list-item popup-search-list-item-bigger">
                   <label class="popup-label-text" for="check-in-date">Дата&nbsp;заезда:</label>
-                    <input class="popup-input popup-date-input" id="check-in-date" type="text" name="check-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" required>
-                    <p class="popup-label-caption text-error">Мы не можем отправить вас в прошлое.</p>
+                  <input class="popup-input popup-date-input" id="check-in-date" type="text" name="check-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" required>
+                  <p class="popup-label-caption text-error">Мы не можем отправить вас в прошлое.</p>
                 </li>
-                <li class="popup-search-list-item">
+                <li class="popup-search-list-item popup-search-list-item-bigger">
                   <label class="popup-label-text" for="check-out-date">Дата&nbsp;выезда:</label>
                   <input class="popup-input popup-date-input" id="check-out-date" type="text" name="check-out-date" value="1 сентября 2023" placeholder="1 сентября 2023" required>
                   <p class="popup-label-caption">На эти даты есть свободные номера. Пока есть.</p>
                 </li>
-                <li>
-                  <ul class="popup-search-sublist">
-                    <li class="popup-search-sublist-item">
-                      <label class="popup-label-text" for="adults">Взрослые:</label>
-                      <div class="number-input-wrapper">
-                        <button class="popup-number-button popup-input-minus" id="adults-minus" type="button"></button>
-                        <input class="popup-input popup-number-input" id="adults" type="text" size="3" name="adults" value="2" placeholder="2" required>
-                        <button class="popup-number-button popup-input-plus" id="adults-plus" type="button"></button>
-                      </div>
-                    </li>
-                    <li class="popup-search-sublist-item">
-                      <label class="popup-label-text popup-label-kids" for="children">Дети:</label>
-                      <div class="number-input-wrapper">
-                        <button class="popup-number-button popup-input-minus" id="children-minus" type="button"></button>
-                        <input class="popup-input popup-number-input" id="children" type="text" size="3" name="children" value="2" placeholder="2">
-                        <button class="popup-number-button popup-input-plus" id="children-plus" type="button"></button>
-                        <p class="kids-description">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
-                      </div>
-                    </li>
-                  </ul>
-              </li>
+                <li class="popup-search-list-item">
+                  <label class="popup-label-text popup-label-adults" for="adults">Взрослые:</label>
+                  <div class="number-input-wrapper">
+                    <button class="popup-number-button popup-input-minus" id="adults-minus" type="button"></button>
+                    <input class="popup-input popup-number-input" id="adults" type="text" size="3" name="adults" value="2" placeholder="2" required>
+                    <button class="popup-number-button popup-input-plus" id="adults-plus" type="button"></button>
+                  </div>
+                </li>
+                <li class="popup-search-list-item">
+                  <label class="popup-label-text popup-label-kids" for="children">Дети:</label>
+                  <div class="number-input-wrapper">
+                    <button class="popup-number-button popup-input-minus" id="children-minus" type="button"></button>
+                    <input class="popup-input popup-number-input" id="children" type="text" size="3" name="children" value="2" placeholder="2">
+                    <button class="popup-number-button popup-input-plus" id="children-plus" type="button"></button>
+                    <p class="kids-description">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                  </div>
+                </li>
               </ul>
             <button class="button button-secondary popup-search-button" type="submit">Найти</button>
           </form>
