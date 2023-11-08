@@ -173,21 +173,27 @@ document.addEventListener("DOMContentLoaded", function() {
   let favoriteCounter = document.querySelector('.favorite-counter');
   let favoriteAdds = document.querySelectorAll('.hotel-card .button-secondary');
 
-
     for (let favoriteAdd of favoriteAdds) {
       favoriteAdd.onclick = function () {
         let favoriteCounterText = parseInt(favoriteCounter.textContent, 10);
+        let favoriteButtonDescription = favoriteAdd.querySelector('.favorite-button-description');
+        let favoriteButtonText = favoriteAdd.querySelector('.favorite-button-text')
+        let hotelName = document.querySelector('.card-title-link').textContent;
 
         if (favoriteAdd.classList.contains('favorite-added')) {
           favoriteCounterText--;
           favoriteCounter.textContent = favoriteCounterText.toString();
           favoriteAdd.classList.remove('favorite-added');
-          favoriteAdd.textContent = 'В избранное';
+          favoriteButtonText.textContent = 'В избранное';
+          favoriteButtonText.removeAttribute('aria-hidden');
+          favoriteButtonDescription.textContent = 'Добавить отель ' + hotelName;
         } else {
           favoriteCounterText++;
           favoriteCounter.textContent = favoriteCounterText.toString();
           favoriteAdd.classList.add('favorite-added');
-          favoriteAdd.textContent = 'В избранном';
+          favoriteButtonText.textContent = 'В избранном';
+          favoriteButtonText.setAttribute('aria-hidden', 'true');
+          favoriteButtonDescription.textContent = 'Удалить отель ' + hotelName + ' из избранного';
         }
       }
     }

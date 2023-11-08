@@ -26,10 +26,10 @@
           </ul>
         </nav>
         <div class="user-communication">
-          <button class="header-icon-button header-search-button popup-open-button" type="button">
-            <span class="visually-hidden">Поиск</span>
+          <button class="header-icon-button header-search-button" type="button">
+            <span class="visually-hidden">Найти на сайте</span>
           </button>
-          <a href="#" class="header-icon-button header-favorite-button">
+          <a class="header-icon-button header-favorite-button" href="#">
             <span class="visually-hidden">Избранных отелей:</span>
             <span class="favorite-counter">12</span>
           </a>
@@ -38,7 +38,7 @@
       </header>
 
       <main class="main-container" data-test="main">
-        <section class="hotel-filter" data-test="filter">
+        <section class="hotel-filter">
           <h1 class="hotel-filter-title">Гостиницы Седоны</h1>
           <ul class="hotel-filter-paginator">
             <li class="filter-paginator-item">
@@ -47,15 +47,15 @@
               </a>
             </li>
             <li class="filter-paginator-item">
-              <a href="catalog.html" class="filter-navigation" aria-current="page" tabindex="-1">
+              <a class="filter-navigation" aria-current="page" tabindex="-1" href="catalog.html">
                 <span>Гостиницы</span>
               </a>
             </li>
           </ul>
 
-          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
             <fieldset class="fieldset infrastructure">
-              <legend><h4 class="fieldset-title">Инфраструктура:</h4></legend>
+              <legend class="fieldset-legend"><h4 class="fieldset-title">Инфраструктура:</h4></legend>
               <ul class="infrastructure-wrapper">
                 <li class="checkbox-item">
                   <input class="check-or-radio-input checkbox-input" type="checkbox" id="checkbox-pool" name="infrastructure" value="pool" checked>
@@ -72,7 +72,7 @@
               </ul>
             </fieldset>
             <fieldset class="fieldset housing-type">
-              <legend><h4 class="fieldset-title">Тип&nbsp;Жилья:</h4></legend>
+              <legend class="fieldset-legend"><h4 class="fieldset-title">Тип&nbsp;Жилья:</h4></legend>
               <ul class="housing-type-wrapper">
                 <li class="radio-item">
                   <input class="check-or-radio-input radio-input" type="radio" id="radio-hotel" name="housing-type" value="hotel" checked>
@@ -89,22 +89,22 @@
               </ul>
             </fieldset>
             <fieldset class="fieldset price">
-              <legend><h4 class="fieldset-title">Стоимость,&nbsp;₽:</h4></legend>
+              <legend class="fieldset-legend"><h4 class="fieldset-title">Стоимость,<span class="visually-hidden">отеля</span>&nbsp;₽:</h4></legend>
               <div class="price-select-wrapper">
                 <div class="price-field">
-                  <label class="form-label price-label" for="price-from">от</label>
-                  <input class="input price-input price-input-from" type="text" id="price-from" name="price-from" value="0" placeholder="0" required>
+                  <label class="form-label price-label" for="price-min">от</label>
+                  <input class="input price-input price-input-min" type="number" id="price-min" name="min-price" value="0" placeholder="0">
                 </div>
                 <div class="price-field">
-                  <label class="form-label price-label" for="price-to">до</label>
-                  <input class="input price-input price-input-to" type="text" id="price-to" name="price-to" value="9000" placeholder="9000">
+                  <label class="form-label price-label" for="price-max">до</label>
+                  <input class="input price-input price-input-max" type="number" id="price-max" name="max-price" value="9000" placeholder="9000">
                 </div>
-                <div class="slider" aria-hidden="true">
+                <div class="slider">
                   <span class="visually-hidden">Слайдер фильтра по цене</span>
-                  <div class="slider-line slider-line-no-active"></div>
-                  <div class="slider-line slider-line-active"></div>
-                  <button class="slider-button slider-button-from" type="button"><span class="visually-hidden">Цена от</span></button>
-                  <button class="slider-button slider-button-to" type="button"><span class="visually-hidden">Цена до</span></button>
+                  <div class="slider-scale" style="left: 0; width: 226px;">
+                    <button class="slider-button slider-button-min" type="button"><span class="visually-hidden">Цена минимальная</span></button>
+                    <button class="slider-button slider-button-max" type="button"><span class="visually-hidden">Цена максимальная</span></button>
+                  </div>
                 </div>
               </div>
             </fieldset>
@@ -147,11 +147,11 @@
                 <a class="card-img-link" href="#" tabindex="-1">
                   <img class="card-img" src="images/hotel-pictures/hotels-amara-resort.jpg" width="300" height="212" alt="Вид из скалистой пещеры на звездное небо в ясную погоду.">
                 </a>
-                <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Amara Resort&nbsp;&&nbsp;Spa </a></h3>
+                <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Amara Resort&nbsp;&&nbsp;Spa</a></h3>
                 <p class="card-price-name">Гостиница</p>
                 <p class="card-price-value">От&nbsp;<span class="hotel-price">4000</span>&nbsp;₽</p>
-                <button class="button button-basic" type="button">Подробнее</button>
-                <button class="button button-secondary" type="button">В&nbsp;избранное</button>
+                <button class="button button-basic" type="button">Подробнее<span class="visually-hidden">о отеле Amara Resort Spa</span></button>
+                <button class="button button-secondary" type="button"><span class="favorite-button-description visually-hidden">Добавить отель Amara Resort Spa</span><span class="favorite-button-text">В&nbsp;избранное</span></button>
                 <p class="stars four-stars-hotel">
                   <span class="visually-hidden stars-number">4 звезды</span>
                 </p>
@@ -164,8 +164,8 @@
                 <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Villas at Poco Diablo</a></h3>
                 <p class="card-price-name">Гостиница</p>
                 <p class="card-price-value">От&nbsp;<span class="hotel-price">5000</span>&nbsp;₽</p>
-                <button class="button button-basic" type="button">Подробнее</button>
-                <button class="button button-secondary favorite-added" type="button">В&nbsp;избранном</button>
+                <button class="button button-basic" type="button">Подробнее<span class="visually-hidden">о отеле Villas at Poco Diablo</span></button>
+                <button class="button button-secondary favorite-added" type="button"><span class="favorite-button-description visually-hidden">Удалить отель Villas at Poco Diablo из избранного</span><span class="favorite-button-text" aria-hidden="true">В&nbsp;избранном</span></button>
                 <p class="stars four-stars-hotel">
                   <span class="visually-hidden stars-number">4&nbsp;звезды</span>
                 </p>
@@ -178,8 +178,8 @@
                 <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">Desert Quail Inn</a></h3>
                 <p class="card-price-name">Гостиница</p>
                 <p class="card-price-value">От&nbsp;<span class="hotel-price">2500</span>&nbsp;₽</p>
-                <button class="button button-basic" type="button">Подробнее</button>
-                <button class="button button-secondary" type="button">В&nbsp;избранное</button>
+                <button class="button button-basic" type="button">Подробнее<span class="visually-hidden">о отеле Desert Quail Inn </span></button>
+                <button class="button button-secondary" type="button"><span class="favorite-button-description visually-hidden">Добавить отель Desert Quail Inn</span><span class="favorite-button-text">В&nbsp;избранное</span></button>
                 <p class="stars three-stars-hotel">
                   <span class="visually-hidden stars-number">3&nbsp;звезды</span>
                 </p>
@@ -192,20 +192,20 @@
                 <h3 class="card-title"><a class="card-title-link" href="#" tabindex="-1">GreenTree Inn</a></h3>
                 <p class="card-price-name">Гостиница</p>
                 <p class="card-price-value">От&nbsp;<span class="hotel-price">1500</span>&nbsp;₽</p>
-                <button class="button button-basic" type="button">Подробнее</button>
-                <button class="button button-secondary" type="button">В&nbsp;избранное</button>
+                <button class="button button-basic" type="button">Подробнее<span class="visually-hidden">о отеле GreenTree Inn</span></button>
+                <button class="button button-secondary" type="button"><span class="favorite-button-description visually-hidden">Добавить отель GreenTree Inn</span><span class="favorite-button-text">В&nbsp;избранное</span></button>
                 <p class="stars two-stars-hotel">
                   <span class="visually-hidden stars-number">2&nbsp;звезды</span>
                 </p>
                 <p class="card-rating">Рейтинг:&nbsp;<span class="card-rating-value">5,0</span></p>
               </li>
             </ul>
-            <button class="slideshow-button slideshow-previous-button display-none" type="button" tabindex="0"></button>
-            <button class="slideshow-button slideshow-next-button display-none" type="button" tabindex="0"></button>
+            <button class="slideshow-button slideshow-previous-button display-none" type="button" tabindex="0"><span class="visually-hidden">Предыдущий отель</span></button>
+            <button class="slideshow-button slideshow-next-button display-none" type="button" tabindex="0"><span class="visually-hidden">Следующий отель</span></button>
           </div>
 
           <footer class="search-results-footer">
-            <ul class="pagination">
+            <ul class="pagination" aria-label="пагинация">
               <li class="pagination-item pagination-current" aria-current="page">
                 <a class="pagination-link" href="#">1</a>
               </li>
@@ -225,7 +225,7 @@
                 <a class="pagination-link" href="#">10</a>
               </li>
             </ul>
-            <!-- Добавляет кнопку "показать еще", если такая нужна
+            <!-- Добавляет кнопку "показать еще", если такая требуется
                <button class="button button-secondary pagination-show-more" type="button">Показать ещё</button> -->
           </footer>
         </section>
@@ -264,7 +264,7 @@
         </ul>
         <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="logo-html-academy" href="https://htmlacademy.ru/">
-          <svg class="logo-html-academy-svg" xmlns="http://www.w3.org/2000/svg" width="115" height="34" role="img" aria-label="Логотип HTML academy." viewBox="0 0 115 34" fill="black">
+          <svg class="logo-html-academy-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип HTML academy." aria-hidden="true" width="115" height="34" viewBox="0 0 115 34" fill="black" >
             <path d="M0 13.2564V15.8564H2.5V13.2564H0Z"/>
             <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z"/>
             <path d="M26.6 5.15645H21.8V1.45645H19.8V5.25645H17.9V7.25645H19.8V13.2564C19.8 14.9564 20.8 15.9564 22.5 15.9564H26.6V13.9564H22.9C22.2 13.9564 21.8 13.5564 21.8 12.8564V7.15645H26.6V5.15645Z"/>
@@ -285,41 +285,42 @@
         <section class="popup-search-container">
           <div class="popup-title-container">
             <h2 class="title popup-title">Поиск гостиницы в Седоне</h2>
-            <button class="popup-close-button" type="button"></button>
+            <button class="popup-close-button" type="button"><span class="visually-hidden">Закрытие формы поиска гостиницы в Седоне.</span></button>
           </div>
           <form class="popup-search-form" action="https://echo.htmlacademy.ru/" method="get">
               <ul class="popup-search-list">
-                <li class="popup-search-list-item">
+                <li class="popup-search-list-item popup-search-list-item-bigger">
                   <label class="popup-label-text" for="check-in-date">Дата&nbsp;заезда:</label>
-                    <input class="input popup-input popup-date-input" id="check-in-date" type="text" name="check-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" required>
-                    <p class="popup-label-caption text-error">Мы не можем отправить вас в прошлое.</p>
+                  <input class="popup-input popup-date-input" id="check-in-date" type="text" name="check-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" required>
+                  <p class="popup-label-caption text-error">Мы не можем отправить вас в прошлое.</p>
                 </li>
-                <li class="popup-search-list-item">
+                <li class="popup-search-list-item popup-search-list-item-bigger">
                   <label class="popup-label-text" for="check-out-date">Дата&nbsp;выезда:</label>
-                  <input class="input popup-input popup-date-input" id="check-out-date" type="text" name="check-out-date" value="1 сентября 2023" placeholder="1 сентября 2023" required>
+                  <input class="popup-input popup-date-input" id="check-out-date" type="text" name="check-out-date" value="1 сентября 2023" placeholder="1 сентября 2023" required>
                   <p class="popup-label-caption">На эти даты есть свободные номера. Пока есть.</p>
                 </li>
-                <li>
-                  <ul class="popup-search-sublist">
-                    <li class="popup-search-sublist-item">
-                      <label class="popup-label-text" for="adults">Взрослые:</label>
-                      <div class="number-input-wrapper">
-                        <button class="popup-number-button popup-input-minus" id="adults-minus" type="button"></button>
-                        <input class="input popup-input popup-number-input" id="adults" type="text" size="3" name="adults" value="2" placeholder="2" required>
-                        <button class="popup-number-button popup-input-plus" id="adults-plus" type="button"></button>
-                      </div>
-                    </li>
-                    <li class="popup-search-sublist-item">
-                      <label class="popup-label-text popup-label-kids" for="children">Дети:</label>
-                      <div class="number-input-wrapper">
-                        <button class="popup-number-button popup-input-minus" id="children-minus" type="button"></button>
-                        <input class="input popup-input popup-number-input" id="children" type="text" size="3" name="children" value="2" placeholder="2">
-                        <button class="popup-number-button popup-input-plus" id="children-plus" type="button"></button>
-                        <p class="kids-description">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
-                      </div>
-                    </li>
-                  </ul>
-              </li>
+                <li class="popup-search-list-item">
+                  <label class="popup-label-text popup-label-adults" for="adults">Взрослые:</label>
+                  <div class="number-input-wrapper">
+                    <button class="popup-number-button popup-input-minus" id="adults-minus" type="button"><span class="visually-hidden">Уменьшить количество взрослых на один.</span></button>
+                    <input class="popup-input popup-number-input" id="adults" type="text" size="3" name="adults" value="2" placeholder="2" required>
+                    <button class="popup-number-button popup-input-plus" id="adults-plus" type="button"><span class="visually-hidden">Увеличить количество взрослых на один.</span></button>
+                  </div>
+                </li>
+                <li class="popup-search-list-item">
+                  <div class="popup-kids-wrapper">
+                    <label class="popup-label-text popup-label-kids" for="children">Дети:</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-kids-label"></button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-kids-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                    </span>
+                  </div>
+                  <div class="number-input-wrapper">
+                    <button class="popup-number-button popup-input-minus" id="children-minus" type="button"><span class="visually-hidden">Уменьшить количество детей на один.</span></button>
+                    <input class="popup-input popup-number-input" id="children" type="text" size="3" name="children" value="2" placeholder="2">
+                    <button class="popup-number-button popup-input-plus" id="children-plus" type="button"><span class="visually-hidden">Увеличить количество детей на один.</span></button>
+                  </div>
+                </li>
               </ul>
             <button class="button button-secondary popup-search-button" type="submit">Найти</button>
           </form>
