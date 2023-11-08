@@ -278,7 +278,6 @@ body {
     margin-left: -16px;
     margin-right: -16px;
     outline: none;
-    border-bottom: var(--medium-outline) rgb(var(--brand-basic-lighter));
     box-shadow:  1px 1px 4px rgb(var(--brand-basic-lighter));
   }
 
@@ -330,8 +329,10 @@ body {
     opacity: var(--active-opacity);
   }
 
-  .header-icon-button:focus {
+  .header-icon-button:focus-visible {
     outline: none;
+    box-shadow: 1px 1px 4px rgb(var(--brand-basic-lighter));
+    border-radius: 4px;
   }
 
   .header-search-button {
@@ -1756,6 +1757,7 @@ body {
   .social-item-button:focus-visible {
     outline: none;
     box-shadow:  1px 1px 4px rgb(var(--brand-basic-lighter));
+    border-radius: 4px;
   }
 
   .social-item-button:active::before {
@@ -1767,6 +1769,8 @@ body {
 .main-footer .phone-number {
     font-size: 40px;
     max-width: 600px;
+    box-sizing: border-box;
+
     line-height: 40px;
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -1786,7 +1790,8 @@ body {
     outline: none;
     padding: 20px;
     margin: -20px;
-    border-bottom: 3px solid rgb(117, 97, 87, 0.6);
+
+    box-shadow: 0 3px 0 0 rgb(117, 97, 87, 0.6);
     color: rgb(117, 97, 87, 1)
   }
 
@@ -1808,7 +1813,8 @@ body {
     outline: none;
     padding: 20px;
     margin: -20px;
-    border-bottom: 3px solid rgb(117, 97, 87, 0.3);
+
+    box-shadow: 0 3px 0 0 rgb(117, 97, 87, 0.3);
   }
 
   .logo-html-academy-svg:hover,
@@ -1864,8 +1870,10 @@ body {
   padding: 64px var(--container-padding);
   box-sizing: border-box;
 
+
   border-radius: 30px;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
 .popup-title-container {
