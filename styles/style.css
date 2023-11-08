@@ -1869,7 +1869,7 @@ body {
   width: 717px;
 
   position: absolute;
-  /* top: 396px; */
+  top: 396px;
   left: 0;
   right: 0;
   margin: auto;
