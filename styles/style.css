@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
-* Browsers: last 2 Chrome versions,last 2 Firefox versions,last 2 Safari versions
+* Browsers: last 2 version,not dead
 */
 
 /* -- ШРИФТЫ -- */
@@ -194,9 +194,14 @@ body {
   color: rgb(255, 255, 255, 0.6);
 }
 
+.input:disabled::-moz-placeholder {
+  color: rgb(255, 255, 255);
+}
+
 .input:disabled::placeholder {
   color: rgb(255, 255, 255);
 }
+
 
 .button.disabled {
   background-color: rgb(var(--disabled-color));
@@ -442,7 +447,9 @@ body {
 	left: 0;
 	right: 0;
 
-  object-fit: contain;
+  -o-object-fit: contain;
+
+     object-fit: contain;
   margin: 0 auto;
 }
 
@@ -540,7 +547,8 @@ body {
 .advantages-card-picture {
   display: block;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .advantages-card-picture-reversed {
@@ -784,7 +792,9 @@ body {
 }
 
 .check-or-radio-input {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   min-width: 20px;
   min-height: 20px;
   margin: 0;
@@ -826,7 +836,8 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   --gap: 2px;
-  column-gap: var(--gap);
+  -moz-column-gap: var(--gap);
+       column-gap: var(--gap);
 }
 
 .price-field {
@@ -847,12 +858,16 @@ body {
     color: inherit;
 
     border: none;
+
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
     appearance: textfield;
   }
 
   .price-input::-webkit-outer-spin-button,
   .price-input::-webkit-inner-spin-button {
-    appearance: none;
+    -webkit-appearance: none;
+            appearance: none;
     margin: 0;
   }
 
@@ -866,6 +881,10 @@ body {
 
 .price-input-max {
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.price-input::-moz-placeholder {
+  color: rgb(0, 0, 0, 1);
 }
 
 .price-input::placeholder {
@@ -982,6 +1001,8 @@ body {
 /* фильтр по... */
 .sort-by {
     width: 292px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     --horisontal-padding: 20px;
     padding: 14px var(--horisontal-padding);
@@ -996,7 +1017,11 @@ body {
     outline: var(--medium-outline) rgb(229, 229, 229);
     border-radius: var(--border-radius);
 
-    appearance: none;
+    -webkit-appearance: none;
+
+       -moz-appearance: none;
+
+            appearance: none;
 
     background-image: url(../images/icon-arrow.svg);
     background-position: calc(100% - var(--horisontal-padding)) 50%;
@@ -1088,7 +1113,8 @@ body {
 
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 1fr;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 16px;
 
   list-style: none;
@@ -1107,7 +1133,8 @@ body {
   display: block;
   width: 300px;
   height: 212px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .card-title {
@@ -1117,6 +1144,8 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+
+  max-height: -webkit-fit-content;
 
   max-height: -moz-fit-content;
 
@@ -1270,7 +1299,8 @@ body {
 
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 16px;
 
   list-style: none;
@@ -1633,6 +1663,8 @@ body {
 .pagination-show-more {
   display: flex;
   min-height: 60px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
   min-width: max-content;
   padding-left: 25px;
   padding-right: 25px;
@@ -1687,6 +1719,10 @@ body {
   .email-input:focus {
     outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
   }
+
+  .email-input::-moz-placeholder {
+    color: rgb(0, 0, 0, 0.6);
+}
 
   .email-input::placeholder {
     color: rgb(0, 0, 0, 0.6);
@@ -1977,6 +2013,14 @@ body {
   color: rgb(255, 87, 87, 1)
 }
 
+.popup-input::-moz-placeholder {
+  font-family: inherit;
+  color: rgb(0, 0, 0, 0.6);
+  opacity: 1;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .popup-input::placeholder {
   font-family: inherit;
   color: rgb(0, 0, 0, 0.6);
@@ -2137,6 +2181,8 @@ body {
 
   display: none;
   width: 256px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
   margin: 0;
   padding: 20px 18px 22px 22px;
