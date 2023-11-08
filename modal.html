@@ -182,13 +182,13 @@
         </a>
       </footer>
 
-      <div class="popup-search-wrapper" data-test="modal">
+      <div class="popup-search-wrapper">
         <section class="popup-search-container">
           <div class="popup-title-container">
             <h2 class="title popup-title">Поиск гостиницы в Седоне</h2>
             <button class="popup-close-button" type="button"><span class="visually-hidden">Закрытие формы поиска гостиницы в Седоне.</span></button>
           </div>
-          <form class="popup-search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="popup-search-form" action="https://echo.htmlacademy.ru/" method="get" data-test="modal">
               <ul class="popup-search-list">
                 <li class="popup-search-list-item popup-search-list-item-bigger">
                   <label class="popup-label-text" for="check-in-date">Дата&nbsp;заезда:</label>
@@ -212,7 +212,7 @@
                   <div class="popup-kids-wrapper">
                     <label class="popup-label-text popup-label-kids" for="children">Дети:</label>
                     <span class="tooltip">
-                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-kids-label"></button>
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-kids-label"><span class="visually-hidden">Открывает подсказку условий оплаты для детей</span></button>
                       <span class="tooltip-text" role="tooltip" id="tooltip-kids-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                     </span>
                   </div>
