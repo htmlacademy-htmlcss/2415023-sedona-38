@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
-* Browsers: last 2 version,not dead
+* Browsers: last 2 version, not dead
 */
 
 /* -- ШРИФТЫ -- */
@@ -347,11 +347,11 @@ body {
   }
 
   .header-search-button {
-    --header-icon: url(../images/icon-search.svg);
+    --header-icon: url("../images/icon-search.svg");
   }
 
   .header-favorite-button {
-    --header-icon: url(../images/icon-favorite.svg);
+    --header-icon: url("../images/icon-favorite.svg");
   }
 
   .header-favorite-button:hover .favorite-counter,
@@ -433,7 +433,7 @@ body {
 
   height: 485px;
 
-  background-image: url(../images/hero-background-decoration.svg), url(../images/hero-background.jpg);
+  background-image: url("../images/hero-background-decoration.svg"), url("../images/hero-background.jpg");
   background-position: center calc(100% + 1px), center;
   background-size: 100% auto, cover;
   background-repeat: no-repeat;
@@ -498,7 +498,7 @@ body {
 .services-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 30px;
 
@@ -599,15 +599,15 @@ body {
 }
 
 .service-housing .service-title::before {
-  --service-title-icon: url(../images/services-hotels.svg);
+  --service-title-icon: url("../images/services-hotels.svg");
 }
 
 .service-food .service-title::before {
-  --service-title-icon: url(../images/services-restorants.svg);
+  --service-title-icon: url("../images/services-restorants.svg");
 }
 
 .service-souvenirs .service-title::before {
-  --service-title-icon: url(../images/services-souvenirs.svg);
+  --service-title-icon: url("../images/services-souvenirs.svg");
 }
 
 /* заинтересовались? */
@@ -632,7 +632,7 @@ body {
 /* -- CATALOG -- */
 /* каталог фильтр */
 .hotel-filter {
-  background-image: url(../images/filter-background.jpg);
+  background-image: url("../images/filter-background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -696,7 +696,7 @@ body {
   margin-right: -8px;
   margin-left: -10px;
 
-  background-image: url(../images/icon-house.svg);
+  background-image: url("../images/icon-house.svg");
   background-repeat: no-repeat;
   background-position: 12px 4px;
   background-size: 12px 12px;
@@ -711,7 +711,7 @@ body {
   content: "";
 
   opacity: 1;
-  background-image: url(../images/icon-next-page.svg);
+  background-image: url("../images/icon-next-page.svg");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 8px 10px;
@@ -729,7 +729,7 @@ body {
 }
 
 /* внутренности поиска */
-.fieldset:disabled .fieldset-title {
+.fieldset:disabled .fieldset-legend {
   opacity: var(--disabled-opacity);
 }
 
@@ -742,6 +742,14 @@ body {
 
 .fieldset-legend {
   padding: 0;
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
 }
 
 
@@ -812,12 +820,12 @@ body {
   }
 
   .checkbox-input:checked {
-    background-image: url(../images/icon-checkbox-checked.svg);
+    background-image: url("../images/icon-checkbox-checked.svg");
     background-repeat: no-repeat;
   }
 
   .radio-input:checked {
-    background-image: url(../images/icon-radio-checked.svg);
+    background-image: url("../images/icon-radio-checked.svg");
     background-repeat: no-repeat;
   }
 
@@ -978,7 +986,7 @@ body {
 
 .search-results-header {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 70px;
 
   margin-bottom: 39px;
@@ -987,18 +995,9 @@ body {
 .search-results-header .title {
   max-width: 450px;
   margin: 0;
+  margin-top: 5px;
 }
 
-.fieldset-title {
-  margin: 0;
-  margin-bottom: 32px;
-
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  color: rgb(255, 255, 255);
-  text-transform: capitalize;
-}
 
 /* фильтр по... */
 .sort-by {
@@ -1025,7 +1024,7 @@ body {
 
             appearance: none;
 
-    background-image: url(../images/icon-arrow.svg);
+    background-image: url("../images/icon-arrow.svg");
     background-position: calc(100% - var(--horisontal-padding)) 50%;
     background-repeat: no-repeat;
   }
@@ -1042,6 +1041,8 @@ body {
 
 .catalog-view-switcher {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 168px;
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -1094,15 +1095,15 @@ body {
   }
 
   .catalog-view-tile {
-    --view-switcher: url(../images/catalog-tile.svg);
+    --view-switcher: url("../images/catalog-tile.svg");
   }
 
   .catalog-view-slideshow {
-    --view-switcher: url(../images/catalog-slideshow.svg);
+    --view-switcher: url("../images/catalog-slideshow.svg");
   }
 
   .catalog-view-list {
-    --view-switcher: url(../images/catalog-list.svg);
+    --view-switcher: url("../images/catalog-list.svg");
 }
 
 /* карточки */
@@ -1206,7 +1207,7 @@ body {
 
   --width: 24px;
 
-  background-image: url(../images/icon-hotel-star.svg);
+  background-image: url("../images/icon-hotel-star.svg");
   background-repeat: repeat;
 }
 
@@ -1283,7 +1284,7 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0.4;
-    background-image: url(../images/subscribe-background.jpg);
+    background-image: url("../images/subscribe-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
@@ -1387,7 +1388,7 @@ body {
   margin-top: -65px;
   margin-left: 110px;
 
-  background-image: url(../images/icon-hotel-star-gold.svg);
+  background-image: url("../images/icon-hotel-star-gold.svg");
 }
 
 .slideshow-active-card .card-price-name,
@@ -1472,13 +1473,13 @@ body {
 .slideshow-next-button {
     right: 185px;
 
-    background-image: url(../images/icon-next-page.svg);
+    background-image: url("../images/icon-next-page.svg");
   }
 
 .slideshow-previous-button {
   left: 185px;
 
-  background-image: url(../images/icon-next-page.svg);
+  background-image: url("../images/icon-next-page.svg");
   transform: translateY(-50%) scaleX(-1);
 }
 
@@ -1691,7 +1692,7 @@ body {
 .subscription-index {
   color: rgb(255, 255, 255);
 
-  background-image: url(../images/subscribe-background.jpg);
+  background-image: url("../images/subscribe-background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1782,15 +1783,15 @@ body {
   }
 
   .social-vk {
-    --social-icon: url(../images/social-vkontakte.svg);
+    --social-icon: url("../images/social-vkontakte.svg");
   }
 
   .social-tg {
-    --social-icon: url(../images/social-telegram.svg);
+    --social-icon: url("../images/social-telegram.svg");
   }
 
   .social-yt {
-    --social-icon: url(../images/social-youtube.svg);
+    --social-icon: url("../images/social-youtube.svg");
   }
 
   .social-item-button:hover::before,
@@ -1940,7 +1941,7 @@ body {
     grid-column: 2;
 
     background-color: rgb(242, 242, 242, 1);
-    background-image: url(../images/icon-x.svg);
+    background-image: url("../images/icon-x.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -2048,7 +2049,7 @@ body {
     padding-right: 50px;
     box-sizing: border-box;
 
-    background-image: url(../images/icon-calendar.svg);
+    background-image: url("../images/icon-calendar.svg");
     background-position: calc(100% - 22px) 50%;
     background-repeat: no-repeat;
 }
@@ -2114,12 +2115,12 @@ body {
   }
 
  .popup-input-minus {
-    background-image: url(../images/icon-minus.svg);
+    background-image: url("../images/icon-minus.svg");
     z-index: 1;
   }
 
   .popup-input-plus {
-   background-image: url(../images/icon-plus.svg);
+   background-image: url("../images/icon-plus.svg");
   }
 
   .popup-number-button:hover {
@@ -2172,8 +2173,8 @@ body {
 
   background-color: rgb(255, 255, 255);
 
-  -webkit-mask: url(../images/icon-info.svg) no-repeat center;
-  mask: url(../images/icon-info.svg) no-repeat center;
+  -webkit-mask: url("../images/icon-info.svg") no-repeat center;
+  mask: url("../images/icon-info.svg") no-repeat center;
 }
 
 .tooltip-toggle:hover {
@@ -2234,7 +2235,7 @@ body {
   height: 9px;
 
   content: "";
-  background-image: url(../images/popup-triangle.svg);
+  background-image: url("../images/popup-triangle.svg");
 
   margin-top: -29px;
   margin-bottom: 15px;
