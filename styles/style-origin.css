@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 2 version,not dead
-*/
-
 /* -- ШРИФТЫ -- */
 @font-face {
   font-family: "PT Sans";
@@ -192,10 +185,6 @@ body {
 .input:disabled {
   background-color: rgb(var(--disabled-color), var(--disabled-opacity));
   color: rgb(255, 255, 255, 0.6);
-}
-
-.input:disabled::-moz-placeholder {
-  color: rgb(255, 255, 255);
 }
 
 .input:disabled::placeholder {
@@ -447,9 +436,7 @@ body {
 	left: 0;
 	right: 0;
 
-  -o-object-fit: contain;
-
-     object-fit: contain;
+  object-fit: contain;
   margin: 0 auto;
 }
 
@@ -547,8 +534,7 @@ body {
 .advantages-card-picture {
   display: block;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .advantages-card-picture-reversed {
@@ -595,7 +581,6 @@ body {
 
   margin: 0 auto 30px auto;
   background: var(--service-title-icon) no-repeat center;
-  background-size: 75px 72px;
 }
 
 .service-housing .service-title::before {
@@ -793,9 +778,7 @@ body {
 }
 
 .check-or-radio-input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   min-width: 20px;
   min-height: 20px;
   margin: 0;
@@ -837,8 +820,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   --gap: 2px;
-  -moz-column-gap: var(--gap);
-       column-gap: var(--gap);
+  column-gap: var(--gap);
 }
 
 .price-field {
@@ -849,7 +831,6 @@ body {
 
 .price-input {
     padding: 12px 20px;
-    padding-right: 45px;
     width: 100%;
     box-sizing: border-box;
 
@@ -868,8 +849,7 @@ body {
 
   .price-input::-webkit-outer-spin-button,
   .price-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-            appearance: none;
+    appearance: none;
     margin: 0;
   }
 
@@ -883,10 +863,6 @@ body {
 
 .price-input-max {
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
-}
-
-.price-input::-moz-placeholder {
-  color: rgb(0, 0, 0, 1);
 }
 
 .price-input::placeholder {
@@ -1003,8 +979,6 @@ body {
 /* фильтр по... */
 .sort-by {
     width: 292px;
-    height: -webkit-max-content;
-    height: -moz-max-content;
     height: max-content;
     --horisontal-padding: 20px;
     padding: 14px var(--horisontal-padding);
@@ -1019,11 +993,7 @@ body {
     outline: var(--medium-outline) rgb(229, 229, 229);
     border-radius: var(--border-radius);
 
-    -webkit-appearance: none;
-
-       -moz-appearance: none;
-
-            appearance: none;
+    appearance: none;
 
     background-image: url(../images/icon-arrow.svg);
     background-position: calc(100% - var(--horisontal-padding)) 50%;
@@ -1089,8 +1059,7 @@ body {
 
     -webkit-mask: var(--view-switcher) no-repeat center;
     mask: var(--view-switcher) no-repeat center;
-    -webkit-mask-size: 16px 14px;
-            mask-size: 16px 14px;
+    mask-size: 16px 14px;
   }
 
   .catalog-view-tile {
@@ -1115,14 +1084,13 @@ body {
 
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 1fr;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   row-gap: 16px;
 
   list-style: none;
 
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 0 1px rgb(230, 230, 230);
+  outline: var(--tiny-outline) rgb(230, 230, 230);
   border-radius: var(--border-radius);
 }
 
@@ -1135,8 +1103,7 @@ body {
   display: block;
   width: 300px;
   height: 212px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .card-title {
@@ -1146,10 +1113,6 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-
-  max-height: -webkit-fit-content;
-
-  max-height: -moz-fit-content;
 
   max-height: fit-content;
 }
@@ -1301,8 +1264,7 @@ body {
 
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   row-gap: 16px;
 
   list-style: none;
@@ -1665,8 +1627,6 @@ body {
 .pagination-show-more {
   display: flex;
   min-height: 60px;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
   min-width: max-content;
   padding-left: 25px;
   padding-right: 25px;
@@ -1721,10 +1681,6 @@ body {
   .email-input:focus {
     outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
   }
-
-  .email-input::-moz-placeholder {
-    color: rgb(0, 0, 0, 0.6);
-}
 
   .email-input::placeholder {
     color: rgb(0, 0, 0, 0.6);
@@ -1901,14 +1857,13 @@ body {
 }
 
 .popup-search-container {
-  display: grid;
-  grid-template-columns: auto 52px;
-
+  display: flex;
+  flex-direction: column;
 
   width: 717px;
 
   position: absolute;
-  top: 396px;
+  /* top: 396px; */
   left: 0;
   right: 0;
   margin: auto;
@@ -1921,23 +1876,25 @@ body {
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
+.popup-title-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 48px;
+}
+
 .popup-title {
   margin: 0;
   padding-right: 30px;
-
-  margin-bottom: 64px;
 }
 
 .popup-close-button {
-    width: 52px;
+    min-width: 52px;
     height: 52px;
     border-radius: 50%;
     border: none;
     padding: 0;
-    margin: 0 -18px 0 18px;
-
-    grid-row: 1;
-    grid-column: 2;
+    margin-right: -18px;
 
     background-color: rgb(242, 242, 242, 1);
     background-image: url(../images/icon-x.svg);
@@ -1959,10 +1916,6 @@ body {
 }
 
 /* форма поиска */
-.popup-search-form {
-  grid-column: 1 / -1;
-}
-
 .popup-search-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1975,18 +1928,13 @@ body {
   list-style: none;
 }
 
-.popup-search-list-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: 20px;
-}
-
 .popup-search-list-item-bigger {
   grid-column: span 2;
 }
 
-.popup-search-list-item-smaller {
-  gap: 46px;
+.popup-search-list-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .popup-label-text {
@@ -2011,27 +1959,16 @@ body {
 }
 
 .popup-label-caption {
-  min-height: 21px;
   margin: 0;
   margin-top: 4px;
-  box-sizing: border-box;
-
   grid-column: 2;
 
   font-size: 16px;
-  text-indent: 20px;
+  padding: 0 20px;
 }
 
 .text-error {
   color: rgb(255, 87, 87, 1)
-}
-
-.popup-input::-moz-placeholder {
-  font-family: inherit;
-  color: rgb(0, 0, 0, 0.6);
-  opacity: 1;
-  font-size: 18px;
-  font-weight: 700;
 }
 
 .popup-input::placeholder {
@@ -2045,7 +1982,6 @@ body {
 .popup-date-input {
     width: 440px;
     padding: 12px 20px;
-    padding-right: 50px;
     box-sizing: border-box;
 
     background-image: url(../images/icon-calendar.svg);
@@ -2064,17 +2000,15 @@ body {
 
 .number-input-wrapper {
   display: grid;
-  grid-template-columns: 20px 31px 20px;
-  gap: 10px;
+  grid-template-columns: 20px auto 20px;
+  position: relative;
   min-width: 110px;
   max-height: 50px;
   padding: 10px 10px;
-
   box-sizing: border-box;
   border-radius: var(--border-radius);
 
   align-self: center;
-  justify-self: start;
   background-color: rgb(242, 242, 242);
 }
 
@@ -2083,17 +2017,7 @@ body {
   padding: 0;
 
   line-height: 20px;
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  appearance: textfield;
-}
-
-.popup-number-input::-webkit-outer-spin-button,
-.popup-number-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-          appearance: none;
-  margin: 0;
-  }
+ }
 
  .popup-number-input:focus {
   outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
@@ -2207,8 +2131,6 @@ body {
 
   display: none;
   width: 256px;
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
   margin: 0;
   padding: 20px 18px 22px 22px;
