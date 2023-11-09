@@ -595,6 +595,7 @@ body {
 
   margin: 0 auto 30px auto;
   background: var(--service-title-icon) no-repeat center;
+  background-size: 75px 72px;
 }
 
 .service-housing .service-title::before {
@@ -848,6 +849,7 @@ body {
 
 .price-input {
     padding: 12px 20px;
+    padding-right: 45px;
     width: 100%;
     box-sizing: border-box;
 
@@ -1120,7 +1122,7 @@ body {
   list-style: none;
 
   background-color: rgb(255, 255, 255);
-  outline: var(--tiny-outline) rgb(230, 230, 230);
+  box-shadow: 0 0 0 1px rgb(230, 230, 230);
   border-radius: var(--border-radius);
 }
 
@@ -1899,8 +1901,9 @@ body {
 }
 
 .popup-search-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto 52px;
+
 
   width: 717px;
 
@@ -1918,25 +1921,23 @@ body {
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
-.popup-title-container {
-  display: flex;
-  justify-content: space-between;
-
-  margin-bottom: 48px;
-}
-
 .popup-title {
   margin: 0;
   padding-right: 30px;
+
+  margin-bottom: 64px;
 }
 
 .popup-close-button {
-    min-width: 52px;
+    width: 52px;
     height: 52px;
     border-radius: 50%;
     border: none;
     padding: 0;
-    margin-right: -18px;
+    margin: 0 -18px 0 18px;
+
+    grid-row: 1;
+    grid-column: 2;
 
     background-color: rgb(242, 242, 242, 1);
     background-image: url(../images/icon-x.svg);
@@ -1958,6 +1959,10 @@ body {
 }
 
 /* форма поиска */
+.popup-search-form {
+  grid-column: 1 / -1;
+}
+
 .popup-search-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1970,13 +1975,18 @@ body {
   list-style: none;
 }
 
+.popup-search-list-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 20px;
+}
+
 .popup-search-list-item-bigger {
   grid-column: span 2;
 }
 
-.popup-search-list-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
+.popup-search-list-item-smaller {
+  gap: 46px;
 }
 
 .popup-label-text {
@@ -2001,12 +2011,15 @@ body {
 }
 
 .popup-label-caption {
+  min-height: 21px;
   margin: 0;
   margin-top: 4px;
+  box-sizing: border-box;
+
   grid-column: 2;
 
   font-size: 16px;
-  padding: 0 20px;
+  text-indent: 20px;
 }
 
 .text-error {
@@ -2032,6 +2045,7 @@ body {
 .popup-date-input {
     width: 440px;
     padding: 12px 20px;
+    padding-right: 50px;
     box-sizing: border-box;
 
     background-image: url(../images/icon-calendar.svg);
@@ -2050,15 +2064,17 @@ body {
 
 .number-input-wrapper {
   display: grid;
-  grid-template-columns: 20px auto 20px;
-  position: relative;
+  grid-template-columns: 20px 31px 20px;
+  gap: 10px;
   min-width: 110px;
   max-height: 50px;
   padding: 10px 10px;
+
   box-sizing: border-box;
   border-radius: var(--border-radius);
 
   align-self: center;
+  justify-self: start;
   background-color: rgb(242, 242, 242);
 }
 
@@ -2067,7 +2083,17 @@ body {
   padding: 0;
 
   line-height: 20px;
- }
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+.popup-number-input::-webkit-outer-spin-button,
+.popup-number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+  }
 
  .popup-number-input:focus {
   outline: var(--focus-outline) rgb(var(--brand-basic-lighter));
