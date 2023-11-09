@@ -284,31 +284,28 @@
 
       <div class="popup-search-wrapper display-none">
         <section class="popup-search-container">
-          <div class="popup-title-container">
-            <h2 class="title popup-title">Поиск гостиницы в Седоне</h2>
-            <button class="popup-close-button" type="button"><span class="visually-hidden">Закрытие формы поиска гостиницы в Седоне.</span></button>
-          </div>
-          <form class="popup-search-form" action="https://echo.htmlacademy.ru/" method="get">
-              <ul class="popup-search-list">
-                <li class="popup-search-list-item popup-search-list-item-bigger">
-                  <label class="popup-label-text" for="check-in-date">Дата&nbsp;заезда:</label>
-                  <input class="popup-input popup-date-input" id="check-in-date" type="text" name="check-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" required>
-                  <p class="popup-label-caption text-error">Мы не можем отправить вас в прошлое.</p>
-                </li>
+          <h2 class="title popup-title">Поиск гостиницы в Седоне</h2>
+          <form class="popup-search-form" action="https://echo.htmlacademy.ru/" method="get" data-test="modal">
+            <ul class="popup-search-list">
+              <li class="popup-search-list-item popup-search-list-item-bigger">
+                <label class="popup-label-text" for="check-in-date">Дата&nbsp;заезда:</label>
+                <input class="popup-input popup-date-input" id="check-in-date" type="text" name="check-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" required>
+                <p class="popup-label-caption text-error">Мы не можем отправить вас в прошлое.</p>
+              </li>
                 <li class="popup-search-list-item popup-search-list-item-bigger">
                   <label class="popup-label-text" for="check-out-date">Дата&nbsp;выезда:</label>
                   <input class="popup-input popup-date-input" id="check-out-date" type="text" name="check-out-date" value="1 сентября 2023" placeholder="1 сентября 2023" required>
                   <p class="popup-label-caption">На эти даты есть свободные номера. Пока есть.</p>
                 </li>
-                <li class="popup-search-list-item">
+                <li class="popup-search-list-item popup-search-list-item-smaller">
                   <label class="popup-label-text popup-label-adults" for="adults">Взрослые:</label>
                   <div class="number-input-wrapper">
                     <button class="popup-number-button popup-input-minus" id="adults-minus" type="button"><span class="visually-hidden">Уменьшить количество взрослых на один.</span></button>
-                    <input class="popup-input popup-number-input" id="adults" type="text" size="3" name="adults" value="2" placeholder="2" required>
+                    <input class="popup-input popup-number-input" id="adults" type="number" size="3" name="adults" value="2" placeholder="2" title="Введите количество взрослых" required>
                     <button class="popup-number-button popup-input-plus" id="adults-plus" type="button"><span class="visually-hidden">Увеличить количество взрослых на один.</span></button>
                   </div>
                 </li>
-                <li class="popup-search-list-item">
+                <li class="popup-search-list-item popup-search-list-item-smaller">
                   <div class="popup-kids-wrapper">
                     <label class="popup-label-text popup-label-kids" for="children">Дети:</label>
                     <span class="tooltip">
@@ -318,13 +315,14 @@
                   </div>
                   <div class="number-input-wrapper">
                     <button class="popup-number-button popup-input-minus" id="children-minus" type="button"><span class="visually-hidden">Уменьшить количество детей на один.</span></button>
-                    <input class="popup-input popup-number-input" id="children" type="text" size="3" name="children" value="2" placeholder="2">
+                    <input class="popup-input popup-number-input" id="children" type="number" size="3" name="children" value="2" placeholder="2" title="Введите количество детей">
                     <button class="popup-number-button popup-input-plus" id="children-plus" type="button"><span class="visually-hidden">Увеличить количество детей на один.</span></button>
                   </div>
                 </li>
               </ul>
-            <button class="button button-secondary popup-search-button" type="submit">Найти</button>
-          </form>
+              <button class="button button-secondary popup-search-button" type="submit">Найти</button>
+            </form>
+            <button class="popup-close-button" type="button"><span class="visually-hidden">Закрытие формы поиска гостиницы в Седоне.</span></button>
         </section>
       </div>
 
