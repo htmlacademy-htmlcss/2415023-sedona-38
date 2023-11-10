@@ -191,7 +191,7 @@ body {
 }
 
 .input:disabled {
-  background-color: #e5e5e5, var(--disabled-opacity));
+  background-color: rgba(var(--disabled-color), var(--disabled-opacity));
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -509,7 +509,15 @@ body {
   align-items: center;
   gap: 30px;
 
-  padding: 40px 84px;
+  padding: 110px 84px 40px 84px;
+}
+
+.services-text {
+  padding: 80px 84px 40px 84px;
+}
+
+.advantages-card-wide .advantages-text {
+  padding-top: 103px;
 }
 
 .advantages-title,
